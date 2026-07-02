@@ -1,0 +1,267 @@
+{
+  "gate": "Gate-TWA-E",
+  "method": "TWA without BN recalibration",
+  "seed": 42,
+  "split_scope": [
+    "Full",
+    "HC-Val"
+  ],
+  "threshold": 0.5,
+  "gate_pass": false,
+  "decision": "STOP_TWA_NO_BN_AT_GATE_E",
+  "next_allowed_gate": "STOP_TWA_NO_BN_AT_GATE_E",
+  "conditions": {
+    "gate_d_passed_and_allows_gate_e": true,
+    "twa4_full_nonregression_vs_ohem": true,
+    "twa4_hcval_improvement_vs_ohem": true,
+    "twa4_not_worse_than_best_single_late_hcval": false,
+    "twa4_retains_tce_hard_split_gain": true,
+    "twa2_twa3_twa4_trend_reasonable": true
+  },
+  "gate_d_report": {
+    "path": "/home/AAAI/OHCM-MSHNet-main/docs/internal/twa/seed42_nudt/gate_twa_d_summary.json",
+    "gate_pass": true,
+    "next_allowed_gate": "Gate-TWA-E",
+    "candidate": "twa_without_bn"
+  },
+  "ohem": {
+    "Full": {
+      "mIoU": 0.8343928490754784,
+      "FA_ppm": 61.4487981221762,
+      "Precision": 0.9062773824962321,
+      "Pd": 0.9798941798941799
+    },
+    "HC-Val": {
+      "mIoU": 0.6047904191616766,
+      "FA_ppm": 386.5559895833333,
+      "Precision": 0.6659340659340659,
+      "Pd": 0.8333333333333334
+    }
+  },
+  "twa4_without_bn": {
+    "Full": {
+      "mIoU": 0.8388914071100175,
+      "FA_ppm": 59.08184740916792,
+      "Precision": 0.9097292932130192,
+      "Pd": 0.9809523809523809
+    },
+    "HC-Val": {
+      "mIoU": 0.6338912133891214,
+      "FA_ppm": 328.06396484375,
+      "Precision": 0.7013888888888888,
+      "Pd": 0.8333333333333334
+    },
+    "delta_full_vs_ohem": {
+      "mIoU": 0.004498558034539135,
+      "FA_ppm": -2.366950713008279,
+      "Precision": 0.0034519107167870766,
+      "Pd": 0.0010582010582009804
+    },
+    "delta_hcval_vs_ohem": {
+      "mIoU": 0.029100794227444715,
+      "FA_ppm": -58.492024739583314,
+      "Precision": 0.03545482295482294,
+      "Pd": 0.0
+    }
+  },
+  "best_single_late_checkpoint": {
+    "name": "ep250",
+    "metrics": {
+      "mIoU": 0.7106481481481481,
+      "FA_ppm": 211.07991536458334,
+      "Precision": 0.7871794871794872,
+      "Pd": 0.8333333333333334
+    },
+    "twa4_delta_vs_best_single_hcval": {
+      "mIoU": -0.07675693475902678,
+      "FA_ppm": 116.98404947916666,
+      "Precision": -0.08579059829059832,
+      "Pd": 0.0
+    },
+    "all_single_late_hcval": {
+      "ep250": {
+        "mIoU": 0.7106481481481481,
+        "FA_ppm": 211.07991536458334,
+        "Precision": 0.7871794871794872,
+        "Pd": 0.8333333333333334
+      },
+      "ep300": {
+        "mIoU": 0.6340956340956341,
+        "FA_ppm": 335.693359375,
+        "Precision": 0.6979405034324943,
+        "Pd": 0.8333333333333334
+      },
+      "ep350": {
+        "mIoU": 0.6175869120654397,
+        "FA_ppm": 356.0384114583333,
+        "Precision": 0.6832579185520362,
+        "Pd": 0.8333333333333334
+      },
+      "ep400": {
+        "mIoU": 0.6047904191616766,
+        "FA_ppm": 386.5559895833333,
+        "Precision": 0.6659340659340659,
+        "Pd": 0.8333333333333334
+      }
+    }
+  },
+  "tce4_hcval": {
+    "mIoU": 0.6367432150313153,
+    "FA_ppm": 330.6070963541667,
+    "Precision": 0.7011494252873564,
+    "Pd": 0.8333333333333334
+  },
+  "tce_retention": {
+    "min_tce_retention": 0.3,
+    "twa4_delta_vs_ohem_hcval": {
+      "mIoU": 0.029100794227444715,
+      "FA_ppm": -58.492024739583314,
+      "Precision": 0.03545482295482294,
+      "Pd": 0.0
+    },
+    "tce4_delta_vs_ohem_hcval": {
+      "mIoU": 0.03195279586963862,
+      "FA_ppm": -55.94889322916663,
+      "Precision": 0.035215359353290454,
+      "Pd": 0.0
+    },
+    "retention_ratio": {
+      "mIoU": 0.9107432835039059,
+      "FA_ppm": 1.0454545454545459,
+      "Precision": 1.0067999760879938
+    },
+    "checked_metrics": {
+      "mIoU": true,
+      "FA_ppm": true
+    },
+    "pass": true
+  },
+  "twa_variant_trend_hcval": {
+    "variant_names": [
+      "TWA-2",
+      "TWA-3",
+      "TWA-4"
+    ],
+    "records": {
+      "TWA-2": {
+        "metrics": {
+          "mIoU": 0.63125,
+          "FA_ppm": 333.1502278645833,
+          "Precision": 0.6981566820276498,
+          "Pd": 0.8333333333333334
+        },
+        "delta_vs_ohem_hcval": {
+          "mIoU": 0.026459580838323338,
+          "FA_ppm": -53.40576171875,
+          "Precision": 0.0322226160935839,
+          "Pd": 0.0
+        },
+        "nonnegative_direction": true
+      },
+      "TWA-3": {
+        "metrics": {
+          "mIoU": 0.6352201257861635,
+          "FA_ppm": 325.5208333333333,
+          "Precision": 0.703016241299304,
+          "Pd": 0.8333333333333334
+        },
+        "delta_vs_ohem_hcval": {
+          "mIoU": 0.030429706624486852,
+          "FA_ppm": -61.03515625,
+          "Precision": 0.03708217536523806,
+          "Pd": 0.0
+        },
+        "nonnegative_direction": true
+      },
+      "TWA-4": {
+        "metrics": {
+          "mIoU": 0.6338912133891214,
+          "FA_ppm": 328.06396484375,
+          "Precision": 0.7013888888888888,
+          "Pd": 0.8333333333333334
+        },
+        "delta_vs_ohem_hcval": {
+          "mIoU": 0.029100794227444715,
+          "FA_ppm": -58.492024739583314,
+          "Precision": 0.03545482295482294,
+          "Pd": 0.0
+        },
+        "nonnegative_direction": true
+      }
+    },
+    "positive_count": 3,
+    "required_positive_count": 2,
+    "twa4_not_worst_by_mIoU": true,
+    "pass": true
+  },
+  "twa_variant_full_report": {
+    "TWA-2": {
+      "metrics": {
+        "mIoU": 0.838162452653048,
+        "FA_ppm": 59.15078772119728,
+        "Precision": 0.9095699831365935,
+        "Pd": 0.982010582010582
+      },
+      "delta_vs_ohem_full": {
+        "mIoU": 0.0037696035775696135,
+        "FA_ppm": -2.2980104009789173,
+        "Precision": 0.0032926006403614094,
+        "Pd": 0.002116402116402072
+      }
+    },
+    "TWA-3": {
+      "metrics": {
+        "mIoU": 0.8385969453792389,
+        "FA_ppm": 59.49548928134413,
+        "Precision": 0.9091738291527802,
+        "Pd": 0.9809523809523809
+      },
+      "delta_vs_ohem_full": {
+        "mIoU": 0.004204096303760507,
+        "FA_ppm": -1.9533088408320722,
+        "Precision": 0.0028964466565480906,
+        "Pd": 0.0010582010582009804
+      }
+    },
+    "TWA-4": {
+      "metrics": {
+        "mIoU": 0.8388914071100175,
+        "FA_ppm": 59.08184740916792,
+        "Precision": 0.9097292932130192,
+        "Pd": 0.9809523809523809
+      },
+      "delta_vs_ohem_full": {
+        "mIoU": 0.004498558034539135,
+        "FA_ppm": -2.366950713008279,
+        "Precision": 0.0034519107167870766,
+        "Pd": 0.0010582010582009804
+      }
+    }
+  },
+  "forbidden_if_fail": [
+    "seed43",
+    "seed44",
+    "HC-Test",
+    "blind",
+    "external",
+    "BN recalibration tuning",
+    "new model training",
+    "new verifier",
+    "new suppression head"
+  ],
+  "forbidden_before_later_gates": [
+    "HC-Test",
+    "blind",
+    "external",
+    "BN recalibration tuning",
+    "new model training",
+    "new verifier",
+    "new suppression head"
+  ],
+  "notes": [
+    "Gate-E is a mechanism/compression gate, not a new training gate.",
+    "Do not run seed43/44 unless this gate passes.",
+    "Do not run HC-Test, blind, or external at Gate-E.",
+    "BN recalibration remains stopped and is not part of the active candidate."
+  ]
+}

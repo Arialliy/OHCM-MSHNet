@@ -1,0 +1,53 @@
+{
+  "plan": "Final stop-state consistency and archive plan",
+  "decision": "READ_ONLY_FAILURE_ARCHIVE_STATE",
+  "current_final_stop": "STOP_TCE4_AT_F3_EXTERNAL_PD_REGRESSION",
+  "stopped_routes": {
+    "tce4": {
+      "decision": "STOP_TCE4_AT_F3_EXTERNAL_PD_REGRESSION",
+      "failed_gate": "Gate-TCE-F3-blind-external-once",
+      "reason": "external Pd regression",
+      "lock_status_required": "STOPPED_BY_F3_PD_REGRESSION"
+    },
+    "tcsr_v1": {
+      "decision": "STOP_TCSR_AT_BANK_AUDIT",
+      "failed_gate": "Gate-TCSR-A",
+      "reason": "train split had insufficient target-safe sparse hard-clutter negatives"
+    },
+    "posthoc_checkpoint_selection": {
+      "decision": "STOP_POSTHOC_SEED_CHECKPOINT_SELECTION_AS_MAIN_METHOD",
+      "reason": "ep300 advantage over TWA-4 was a numerical tie and not a structural method"
+    },
+    "twa_no_bn": {
+      "decision": "STOP_TWA_NO_BN_AT_GATE_E",
+      "reason": "failed mechanism comparison against single late checkpoint control"
+    },
+    "late_snapshot_ep250": {
+      "decision": "STOP_LATE_SNAPSHOT_EP250_AT_GATE_A",
+      "reason": "HC-Val strong but Full split unsafe"
+    }
+  },
+  "allowed_next_work": [
+    "final stop-state checker",
+    "final stop-state pytest",
+    "README / STOPPED summary consistency",
+    "failure-analysis table",
+    "archive packaging"
+  ],
+  "forbidden_next_work": [
+    "new training",
+    "new evaluation",
+    "threshold search",
+    "seed search",
+    "checkpoint search",
+    "split redefinition",
+    "SIRST3 mask imputation",
+    "BN tuning",
+    "new verifier",
+    "new suppression head",
+    "loss.py modification",
+    "net.py modification",
+    "train.py modification",
+    "dataset.py modification"
+  ]
+}

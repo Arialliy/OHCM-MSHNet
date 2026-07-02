@@ -1,0 +1,31 @@
+{
+  "num_images": 697,
+  "num_labels": 697,
+  "expected_count": 697,
+  "global_absdiff_mean": 1.6372530264636276e-05,
+  "target_absdiff_mean": 0.008953512235740368,
+  "boundary_absdiff_mean": 0.0018659932549669983,
+  "far_bg_absdiff_mean": 2.665985640199566e-06,
+  "ohem_neg_absdiff_mean": 0.001805153387645527,
+  "topk_far_absdiff_mean": 0.000506739131968666,
+  "detached_fp_absdiff_mean": 0.30580402788635686,
+  "topk_far_rank_disagreement": 0.46999309503809517,
+  "teacher_lower_on_student_high_far_rate": 0.7946737456425095,
+  "teacher_preserves_target_rate": 0.9543430340942215,
+  "per_checkpoint_variance_topk_far_mean": 8.802258854236654e-05,
+  "per_checkpoint_variance_target_mean": 0.0016514264523898455,
+  "num_images_with_informative_topk_far": 5,
+  "informative_image_ratio": 0.007173601147776184,
+  "gate_pass": false,
+  "fail_reasons": [
+    "topk_far_teacher_student_diff_too_small",
+    "too_few_informative_images"
+  ],
+  "label_dir": "docs/internal/tce_soft_labels/seed42_train",
+  "topk_far_ratio": 0.005,
+  "target_dilate": 5,
+  "far_dilate": 9,
+  "outputs": {
+    "per_image": "docs/internal/tce_teacher_info_audit_seed42_train/per_image.csv"
+  }
+}

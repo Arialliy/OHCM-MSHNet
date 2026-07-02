@@ -1,0 +1,30 @@
+{
+  "dataset": "NUDT-SIRST",
+  "split": "train",
+  "tce_soft_dir": "docs/internal/tce_soft_labels/seed42_train",
+  "train_image_count": 697,
+  "num_npz": 697,
+  "missing_npz": 0,
+  "extra_npz": 0,
+  "p_tce_mean": 0.000682003284330427,
+  "p_tce_std": 0.02395303458392278,
+  "target_p_tce_mean": 0.9222647766602711,
+  "background_p_tce_mean": 5.566924668434697e-05,
+  "far_background_p_tce_mean": 3.2961719556135393e-06,
+  "teacher_student_absdiff_mean": 1.637253001532036e-05,
+  "num_images_with_valid_teacher": 697,
+  "images_with_valid_teacher_ratio": 1.0,
+  "gate_checks": {
+    "num_npz_eq_train_count": true,
+    "missing_npz_eq_0": true,
+    "images_with_valid_teacher_ratio_eq_1": true,
+    "p_tce_not_constant": true,
+    "target_gt_background": true,
+    "teacher_student_absdiff_gt_min": false
+  },
+  "gate_pass": false,
+  "outputs": {
+    "per_image": "docs/internal/tce_soft_audit_seed42_train/per_image.csv",
+    "missing": "docs/internal/tce_soft_audit_seed42_train/missing.txt"
+  }
+}

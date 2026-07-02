@@ -1,0 +1,28 @@
+model_name: EACFMSHNet
+dataset_name: NUDT-SIRST
+seed: 42
+
+dataset_dir: /home/AAAI/OHCM-MSHNet/datasets
+save: /home/AAAI/OHCM-MSHNet/results/official/EACFMSHNet/seed42
+pretrained_ohem_checkpoint: /home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar
+scale_consensus_summary: docs/internal/eacf_scale_consensus_seed42_train/summary.json
+
+train:
+  batchSize: 4
+  patchSize: 256
+  nEpochs: 80
+  optimizer_name: Adagrad
+  learning_rate: 0.005
+  mshnet_warm_epoch: 0
+  mshnet_in_channels: 1
+  lambda_variant: 0.2
+  ohem_ratio: 0.01
+
+eacf:
+  freeze_backbone: true
+  eta_max: 0.5
+  lambda_anchor: 0.5
+  lambda_scale_bg: 0.05
+  lambda_scale_target: 0.02
+  target_dilate_radius: 3
+  anchor_easy_bg_thr: 0.05

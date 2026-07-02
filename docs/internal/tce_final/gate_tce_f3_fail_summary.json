@@ -1,0 +1,85 @@
+{
+  "gate": "Gate-TCE-F3-blind-external-once",
+  "decision": "F3_FAIL_NO_REDESIGN",
+  "gate_pass": false,
+  "closed_utc": "2026-07-02T09:52:44Z",
+  "candidate": "TCE-4-OHEM",
+  "baseline": "MSHNetOHEM-400",
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "tce_epochs": [
+    250,
+    300,
+    350,
+    400
+  ],
+  "once_lock_created": true,
+  "once_lock_status_before_close": "STARTED",
+  "preflight_pass": true,
+  "final_report_generated": false,
+  "reason_final_report_not_generated": "F3 stopped by external Pd regression and SIRST3 manifest integrity failure before full final-report aggregation.",
+  "completed_splits": [
+    "external_nuaa_sirst",
+    "external_irstd_1k"
+  ],
+  "failed_splits": {
+    "external_nuaa_sirst": {
+      "fail_reason": "Pd regression",
+      "min_delta_Pd": -0.01834862385321101,
+      "mean_delta_Pd": -0.003058103975535187,
+      "mean_delta_mIoU": 0.012339003820043326,
+      "mean_delta_FA_ppm": -58.193171978400635
+    },
+    "external_irstd_1k": {
+      "fail_reason": "Pd regression",
+      "min_delta_Pd": -0.013468013468013518,
+      "mean_delta_Pd": -0.005611672278338957,
+      "mean_delta_mIoU": 0.00013410636811863239,
+      "mean_delta_FA_ppm": -5.2317655699367736
+    }
+  },
+  "not_completed_splits": {
+    "external_sirst3": {
+      "reason": "manifest integrity failure",
+      "total_entries": 1079,
+      "missing_masks": 365,
+      "missing_images": 1,
+      "valid_image_mask_pairs": 713,
+      "first_missing_mask_entries": [
+        "Misc_338",
+        "Misc_379",
+        "Misc_422",
+        "Misc_73",
+        "Misc_321",
+        "Misc_372",
+        "Misc_420",
+        "Misc_224",
+        "Misc_274",
+        "Misc_240"
+      ],
+      "first_missing_image_entries": [
+        "000022"
+      ]
+    }
+  },
+  "interpretation": "TCE-4 internal gains primarily reflect conservative false-alarm reduction. External validation exposed target-detection regression, so TCE-4 must not be rescued by threshold, seed, checkpoint, or split changes.",
+  "forbidden_next_actions": [
+    "threshold search",
+    "seed search",
+    "checkpoint search",
+    "split redefinition",
+    "external rescue",
+    "SIRST3 labeled subset replacement",
+    "BN tuning",
+    "new model training",
+    "new verifier or suppression head",
+    "loss.py modification",
+    "net.py modification",
+    "train.py modification",
+    "dataset.py modification"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "gate_pass": true,
+  "fail_reasons": [],
+  "dataset": "NUDT-SIRST",
+  "split": "train",
+  "split_source": "/home/AAAI/OHCM-MSHNet/datasets/NUDT-SIRST/img_idx/train_NUDT-SIRST.txt",
+  "model_name": "MSHNetOHEM",
+  "checkpoint": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "checkpoint_epoch": 400,
+  "num_images": 697,
+  "target_scale_var_mean": 0.04883519710431803,
+  "far_bg_high_conf_scale_var_mean": 0.16340845812554722,
+  "easy_bg_scale_var_mean": 7.24782404855841e-09,
+  "single_scale_high_bg_ratio": 0.00016825900921185594,
+  "multi_scale_target_support_mean": 0.9577124835065812,
+  "scale_weight_oracle_upper_bound_delta_miou": 0.08326897536219813,
+  "base_mIoU": 0.8594903050401841,
+  "oracle_mIoU": 0.9427592804023822,
+  "counts": {
+    "target_pixels": 31073.0,
+    "target_multiscale_support_pixels": 29759.0,
+    "target_scale_var_sum": 1517.4560796224741,
+    "far_bg_pixels": 45412130.0,
+    "far_bg_high_conf_pixels": 7844.0,
+    "far_bg_high_conf_scale_var_sum": 1281.7759455367923,
+    "single_scale_high_bg_pixels": 7641.0,
+    "easy_bg_pixels": 45401017.0,
+    "easy_bg_scale_var_sum": 0.3290585828416092
+  },
+  "thresholds": {
+    "threshold": 0.5,
+    "scale_threshold": 0.5,
+    "target_dilate_radius": 5,
+    "easy_bg_thr": 0.05,
+    "min_target_multiscale_support": 0.9,
+    "min_high_conf_bg_scale_var": 1e-05,
+    "min_single_scale_high_bg_ratio": 1e-08
+  },
+  "outputs": {
+    "per_image": "docs/internal/eacf_scale_consensus_seed42_train/per_image.csv"
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "gate": "TWA_seed42_A_B_C",
+  "gate_twa_a": {
+    "pass": true,
+    "twa_checkpoint": "docs/internal/twa/seed42_nudt/twa_seed42_250_300_350_400.pth.tar",
+    "checkpoint_count": 4
+  },
+  "gate_twa_b": {
+    "pass": false,
+    "checks": {
+      "mIoU_ge_twa": false,
+      "Pd_ge_twa": true,
+      "Precision_ge_twa": false,
+      "FA_ppm_le_twa": false,
+      "not_catastrophic_vs_ohem": true
+    },
+    "decision": "USE_TWA_WITHOUT_BN_FOR_FULL_GATE"
+  },
+  "gate_twa_c": {
+    "pass": true,
+    "checks": {
+      "mIoU": true,
+      "Pd": true,
+      "Precision": true,
+      "FA_ppm": true
+    },
+    "candidate": "TWA_without_BN",
+    "decision": "FULL_GATE_PASS_STOP_BEFORE_HCVAL"
+  },
+  "ohem_full": {
+    "threshold": 0.5,
+    "mIoU": 0.8343928490754784,
+    "nIoU": 0.8491602506370457,
+    "Pd": 0.9798941798941799,
+    "FA": 6.14487981221762e-05,
+    "FA_ppm": 61.4487981221762,
+    "Precision": 0.9062773824962321,
+    "Recall": 0.9131908882217906,
+    "F1": 0.9097210005981071,
+    "FP_components": 47.0
+  },
+  "twa_full": {
+    "threshold": 0.5,
+    "mIoU": 0.8388914071100175,
+    "nIoU": 0.8544159756800427,
+    "Pd": 0.9809523809523809,
+    "detected_targets": 927.0,
+    "target_components": 945.0,
+    "FA": 5.908184740916792e-05,
+    "FA_ppm": 59.08184740916792,
+    "Precision": 0.9097292932130192,
+    "Recall": 0.9150626876214021,
+    "F1": 0.9123881963518558,
+    "FP_pixels": 2571.0,
+    "GT_pixels": 28315.0,
+    "FP_components": 31.0
+  },
+  "twa_bn_full": {
+    "threshold": 0.5,
+    "mIoU": 0.8341080766995933,
+    "nIoU": 0.8498150197770316,
+    "Pd": 0.9809523809523809,
+    "detected_targets": 927.0,
+    "target_components": 945.0,
+    "FA": 6.119601697806853e-05,
+    "FA_ppm": 61.19601697806853,
+    "Precision": 0.9065679601431479,
+    "Recall": 0.9125551827653188,
+    "F1": 0.9095517186757486,
+    "FP_pixels": 2663.0,
+    "GT_pixels": 28315.0,
+    "FP_components": 39.0
+  },
+  "deltas_twa_minus_ohem": {
+    "mIoU": 0.004498558034539135,
+    "Pd": 0.0010582010582009804,
+    "Precision": 0.0034519107167870766,
+    "FA_ppm": -2.366950713008279,
+    "FP_components": -16.0
+  },
+  "deltas_twa_bn_minus_twa": {
+    "mIoU": -0.004783330410424225,
+    "Pd": 0.0,
+    "Precision": -0.0031613330698713193,
+    "FA_ppm": 2.114169568900607,
+    "FP_components": 8.0
+  },
+  "constraints": {
+    "hcval_not_run": true,
+    "seed43_44_not_run": true,
+    "hc_test_blind_external_not_run": true
+  },
+  "twa_no_bn_status": "PASS_GATE_TWA_C",
+  "twa_bn_status": "STOP_BN_RECALIBRATION",
+  "current_candidate": "twa_without_bn",
+  "next_allowed_gate": "Gate-TWA-D-HCVal-seed42",
+  "forbidden_next_actions": [
+    "seed43",
+    "seed44",
+    "HC-Test",
+    "blind",
+    "external",
+    "BN recalibration tuning",
+    "new model training"
+  ]
+}

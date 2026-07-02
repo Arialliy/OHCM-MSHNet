@@ -1,0 +1,32 @@
+{
+  "gate_pass": true,
+  "fail_reasons": [],
+  "dataset": "NUDT-SIRST",
+  "split": "train",
+  "split_source": "/home/AAAI/OHCM-MSHNet/datasets/NUDT-SIRST/img_idx/train_NUDT-SIRST.txt",
+  "num_images": 128,
+  "checkpoint": "/home/AAAI/OHCM-MSHNet/results/official/CGAMSHNet/seed42/NUDT-SIRST/CGAMSHNet_1.pth.tar",
+  "ohem_checkpoint": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "epoch": 1,
+  "geometry_head_grad_norm": 1.9230856938279917,
+  "center_loss": 0.20433124899864197,
+  "scale_loss": 0.969616174697876,
+  "local_peak_bg_loss": 0.009075099602341652,
+  "peak_count": 65.0,
+  "checkpoint_has_geometry_keys": true,
+  "optimizer_has_geometry_params": true,
+  "mean_abs_final_minus_ohem_prob": 2.639532255138688e-05,
+  "final_easy_anchor_drift": 7.638676953358736e-06,
+  "final_hard_region_update": 0.08942686990485527,
+  "base_fp_components": 1,
+  "cga_fp_components": 2,
+  "fp_component_delta": 1,
+  "thresholds": {
+    "easy_drift_limit": 0.01,
+    "hard_update_min": 1e-05,
+    "fp_delta_limit": 10
+  },
+  "outputs": {
+    "per_image": "docs/internal/cga_activation_seed42_epoch1/per_image.csv"
+  }
+}

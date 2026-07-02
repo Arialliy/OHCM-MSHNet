@@ -1,0 +1,42 @@
+{
+  "current_status": "STOP_LATE_SNAPSHOT_EP250_AT_GATE_A",
+  "previous_status": [
+    "STOP_TWA_NO_BN_AT_GATE_E",
+    "STOP_LATE_SNAPSHOT_EP250_AT_GATE_A"
+  ],
+  "next_allowed_gate": "Gate-TWA-E2-FSC",
+  "gate_name": "Full-Safe Single-Late Control",
+  "seed": 42,
+  "allowed_epochs": [
+    250,
+    300,
+    350,
+    400
+  ],
+  "candidate_epochs": [
+    250,
+    300,
+    350
+  ],
+  "baseline_epoch": 400,
+  "fixed_threshold": 0.5,
+  "allowed_splits": [
+    "Full",
+    "HC-Val"
+  ],
+  "forbidden_actions": [
+    "seed43",
+    "seed44",
+    "HC-Test",
+    "blind",
+    "external",
+    "threshold_search",
+    "BN_tuning",
+    "new_training",
+    "new_epochs_outside_250_300_350_400",
+    "new_TWA_combinations",
+    "new_model_structure",
+    "new_loss",
+    "new_verifier_or_suppression_head"
+  ]
+}

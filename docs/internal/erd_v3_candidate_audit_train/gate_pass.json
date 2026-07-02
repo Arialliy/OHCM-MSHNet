@@ -1,0 +1,6 @@
+{
+  "gate_pass": true,
+  "method": "ERDMSHNetV3_TPCS",
+  "split": "train",
+  "summary": "docs/internal/erd_v3_candidate_audit_train/summary.json"
+}

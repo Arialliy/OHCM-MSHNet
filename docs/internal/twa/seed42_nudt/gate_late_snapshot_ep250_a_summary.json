@@ -1,0 +1,186 @@
+{
+  "gate": "Gate-LS-A",
+  "method": "LateSnapshot-ep250",
+  "origin": "Gate-TWA-E best single late checkpoint audit",
+  "seed": 42,
+  "threshold": 0.5,
+  "gate_pass": false,
+  "decision": "STOP_LATE_SNAPSHOT_EP250_AT_GATE_A",
+  "next_allowed_gate": "STOP_LATE_SNAPSHOT_EP250_AT_GATE_A",
+  "conditions": {
+    "gate_e_failed_only_because_best_single_won": true,
+    "best_single_is_frozen_snapshot": true,
+    "snapshot_full_nonregression_vs_ohem": false,
+    "snapshot_hcval_improvement_vs_ohem": true,
+    "snapshot_hcval_improvement_vs_twa4": true
+  },
+  "gate_e_report": {
+    "gate_pass": false,
+    "decision": "STOP_TWA_NO_BN_AT_GATE_E",
+    "next_allowed_gate": "STOP_TWA_NO_BN_AT_GATE_E",
+    "failed_conditions": [
+      "twa4_not_worse_than_best_single_late_hcval"
+    ],
+    "required_failed_conditions": [
+      "twa4_not_worse_than_best_single_late_hcval"
+    ],
+    "stopped_at_gate_e": true,
+    "only_best_single_failed": true,
+    "pass": true
+  },
+  "best_single_report": {
+    "reported_best_single": "ep250",
+    "computed_best_single": "ep250",
+    "expected_snapshot_name": "ep250",
+    "name_matches_report": true,
+    "name_is_expected": true,
+    "second_best_single": "ep300",
+    "unique_miou_margin": 0.07655251405251406,
+    "min_unique_miou_margin": 0.005,
+    "unique_pass": true,
+    "ranked_single_late_hcval": [
+      {
+        "name": "ep250",
+        "metrics": {
+          "mIoU": 0.7106481481481481,
+          "FA_ppm": 211.07991536458334,
+          "Precision": 0.7871794871794872,
+          "Pd": 0.8333333333333334
+        }
+      },
+      {
+        "name": "ep300",
+        "metrics": {
+          "mIoU": 0.6340956340956341,
+          "FA_ppm": 335.693359375,
+          "Precision": 0.6979405034324943,
+          "Pd": 0.8333333333333334
+        }
+      },
+      {
+        "name": "ep350",
+        "metrics": {
+          "mIoU": 0.6175869120654397,
+          "FA_ppm": 356.0384114583333,
+          "Precision": 0.6832579185520362,
+          "Pd": 0.8333333333333334
+        }
+      },
+      {
+        "name": "ep400",
+        "metrics": {
+          "mIoU": 0.6047904191616766,
+          "FA_ppm": 386.5559895833333,
+          "Precision": 0.6659340659340659,
+          "Pd": 0.8333333333333334
+        }
+      }
+    ],
+    "pass": true
+  },
+  "ohem": {
+    "Full": {
+      "mIoU": 0.8343928490754784,
+      "FA_ppm": 61.4487981221762,
+      "Precision": 0.9062773824962321,
+      "Pd": 0.9798941798941799
+    },
+    "HC-Val": {
+      "mIoU": 0.6047904191616766,
+      "FA_ppm": 386.5559895833333,
+      "Precision": 0.6659340659340659,
+      "Pd": 0.8333333333333334
+    }
+  },
+  "snapshot": {
+    "name": "ep250",
+    "Full": {
+      "mIoU": 0.831138652207591,
+      "FA_ppm": 61.33389760212726,
+      "Precision": 0.906090566834383,
+      "Pd": 0.9798941798941799
+    },
+    "HC-Val": {
+      "mIoU": 0.7106481481481481,
+      "FA_ppm": 211.07991536458334,
+      "Precision": 0.7871794871794872,
+      "Pd": 0.8333333333333334
+    },
+    "delta_full_vs_ohem": {
+      "mIoU": -0.0032541968678874156,
+      "FA_ppm": -0.11490052004894125,
+      "Precision": -0.00018681566184908238,
+      "Pd": 0.0
+    },
+    "delta_hcval_vs_ohem": {
+      "mIoU": 0.1058577289864715,
+      "FA_ppm": -175.47607421874997,
+      "Precision": 0.12124542124542126,
+      "Pd": 0.0
+    },
+    "delta_hcval_vs_twa4": {
+      "mIoU": 0.07675693475902678,
+      "FA_ppm": -116.98404947916666,
+      "Precision": 0.08579059829059832,
+      "Pd": 0.0
+    }
+  },
+  "twa4_without_bn": {
+    "HC-Val": {
+      "mIoU": 0.6338912133891214,
+      "FA_ppm": 328.06396484375,
+      "Precision": 0.7013888888888888,
+      "Pd": 0.8333333333333334
+    }
+  },
+  "gate_criteria": {
+    "min_unique_miou_margin": 0.005,
+    "full_nonregression": {
+      "min_delta_mIoU": 0.0,
+      "max_delta_FA_ppm": 0.0,
+      "min_delta_Precision": 0.0,
+      "min_delta_Pd": 0.0
+    },
+    "hcval_vs_ohem": {
+      "min_delta_mIoU": 0.005,
+      "min_fa_reduction_ppm": 10.0,
+      "min_delta_Precision": 0.0,
+      "min_delta_Pd": 0.0
+    },
+    "hcval_vs_twa4": {
+      "min_delta_mIoU": 0.005,
+      "min_fa_reduction_ppm": 10.0,
+      "min_delta_Precision": 0.0,
+      "min_delta_Pd": 0.0
+    }
+  },
+  "forbidden_if_fail": [
+    "seed43",
+    "seed44",
+    "HC-Test",
+    "blind",
+    "external",
+    "BN recalibration tuning",
+    "new model training",
+    "new verifier",
+    "new suppression head",
+    "new checkpoint combination search",
+    "threshold search"
+  ],
+  "forbidden_before_later_gates": [
+    "HC-Test",
+    "blind",
+    "external",
+    "BN recalibration tuning",
+    "new verifier",
+    "new suppression head",
+    "new checkpoint combination search",
+    "threshold search"
+  ],
+  "notes": [
+    "Do not rewrite Gate-E as PASS; Gate-E remains failed for TWA-4 weight averaging.",
+    "This gate only validates the ep250 snapshot exposed by Gate-E; it does not authorize checkpoint search.",
+    "If this gate passes, seed43/44 are allowed only for the frozen ep250-vs-ep400 paired protocol.",
+    "HC-Test, blind, and external remain forbidden before later gates."
+  ]
+}

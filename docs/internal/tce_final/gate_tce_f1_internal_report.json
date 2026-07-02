@@ -1,0 +1,551 @@
+{
+  "gate": "Gate-TCE-F1-internal-evidence-aggregation",
+  "method": "TCE-4-OHEM",
+  "checkpoints": [
+    250,
+    300,
+    350,
+    400
+  ],
+  "threshold": 0.5,
+  "aggregation": "existing_official_tce_aggregation",
+  "gate_pass": true,
+  "manifest_complete": true,
+  "missing_manifest_pairs": [],
+  "missing_summary_files": [],
+  "thresholds": {
+    "min_hc_miou_delta": 0.005,
+    "min_hc_fa_reduction": 10.0
+  },
+  "by_split": {
+    "full": {
+      "num_seeds": 3,
+      "expected_num_seeds": 3,
+      "num_pass": 3,
+      "all_pass": true,
+      "delta_summary": {
+        "mIoU": {
+          "mean": 0.002820245018584725,
+          "std": 0.0019764849141339492,
+          "values": [
+            0.004822837199031427,
+            0.003507722845381922,
+            0.00013017501134082732
+          ]
+        },
+        "Precision": {
+          "mean": 0.0042255173716066645,
+          "std": 0.0021253274251328497,
+          "values": [
+            0.004392941763456948,
+            0.006740747614596421,
+            0.0015428627367666259
+          ]
+        },
+        "Pd": {
+          "mean": 0.0007054673721339869,
+          "std": 0.0004988407627417958,
+          "values": [
+            0.0010582010582009804,
+            0.0,
+            0.0010582010582009804
+          ]
+        },
+        "FA_ppm": {
+          "mean": -3.1329541800012515,
+          "std": 1.6234575629654757,
+          "values": [
+            -3.0793339373117448,
+            -5.1475432981927725,
+            -1.1719853044992377
+          ]
+        }
+      },
+      "rows": [
+        {
+          "seed": 42,
+          "split": "full",
+          "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/eval_full/summary_metrics.json",
+          "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed42/full/summary_metrics.json",
+          "delta": {
+            "mIoU": 0.004822837199031427,
+            "Precision": 0.004392941763456948,
+            "Pd": 0.0010582010582009804,
+            "FA_ppm": -3.0793339373117448
+          },
+          "ohem_mIoU": 0.8343928490754784,
+          "tce_mIoU": 0.8392156862745098,
+          "ohem_Precision": 0.9062773824962321,
+          "tce_Precision": 0.9106703242596891,
+          "ohem_Pd": 0.9798941798941799,
+          "tce_Pd": 0.9809523809523809,
+          "ohem_FA_ppm": 61.4487981221762,
+          "tce_FA_ppm": 58.369464184864455,
+          "pass": true
+        },
+        {
+          "seed": 43,
+          "split": "full",
+          "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/eval_full/summary_metrics.json",
+          "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed43/full/summary_metrics.json",
+          "delta": {
+            "mIoU": 0.003507722845381922,
+            "Precision": 0.006740747614596421,
+            "Pd": 0.0,
+            "FA_ppm": -5.1475432981927725
+          },
+          "ohem_mIoU": 0.8185726569217541,
+          "tce_mIoU": 0.822080379767136,
+          "ohem_Precision": 0.8928100034734283,
+          "tce_Precision": 0.8995507510880247,
+          "ohem_Pd": 0.9767195767195768,
+          "tce_Pd": 0.9767195767195768,
+          "ohem_FA_ppm": 70.91660097420933,
+          "tce_FA_ppm": 65.76905767601656,
+          "pass": true
+        },
+        {
+          "seed": 44,
+          "split": "full",
+          "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/eval_full/summary_metrics.json",
+          "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed44/full/summary_metrics.json",
+          "delta": {
+            "mIoU": 0.00013017501134082732,
+            "Precision": 0.0015428627367666259,
+            "Pd": 0.0010582010582009804,
+            "FA_ppm": -1.1719853044992377
+          },
+          "ohem_mIoU": 0.8429078823031053,
+          "tce_mIoU": 0.8430380573144461,
+          "ohem_Precision": 0.9159407973939523,
+          "tce_Precision": 0.9174836601307189,
+          "ohem_Pd": 0.9767195767195768,
+          "tce_Pd": 0.9777777777777777,
+          "ohem_FA_ppm": 54.554766919239455,
+          "tce_FA_ppm": 53.38278161474022,
+          "pass": true
+        }
+      ]
+    },
+    "hctest": {
+      "num_seeds": 3,
+      "expected_num_seeds": 3,
+      "num_pass": 3,
+      "all_pass": true,
+      "delta_summary": {
+        "mIoU": {
+          "mean": 0.014697124590140276,
+          "std": 0.006083816538071325,
+          "values": [
+            0.02093001461933497,
+            0.006444285225773894,
+            0.016717073925311965
+          ]
+        },
+        "Precision": {
+          "mean": 0.018225690055015915,
+          "std": 0.004674369200537028,
+          "values": [
+            0.023587365980875075,
+            0.012196133742636728,
+            0.018893570441535945
+          ]
+        },
+        "Pd": {
+          "mean": 0.030303030303030276,
+          "std": 0.0428549564355483,
+          "values": [
+            0.09090909090909083,
+            0.0,
+            0.0
+          ]
+        },
+        "FA_ppm": {
+          "mean": -25.893702651515145,
+          "std": 0.6539147405326516,
+          "values": [
+            -26.356090198863626,
+            -26.356090198863626,
+            -24.968927556818187
+          ]
+        }
+      },
+      "rows": [
+        {
+          "seed": 42,
+          "split": "hctest",
+          "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_42/eval_hctest/summary_metrics.json",
+          "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed42/hctest/summary_metrics.json",
+          "delta": {
+            "mIoU": 0.02093001461933497,
+            "Precision": 0.023587365980875075,
+            "Pd": 0.09090909090909083,
+            "FA_ppm": -26.356090198863626
+          },
+          "ohem_mIoU": 0.5310810810810811,
+          "tce_mIoU": 0.5520110957004161,
+          "ohem_Precision": 0.645320197044335,
+          "tce_Precision": 0.66890756302521,
+          "ohem_Pd": 0.8181818181818182,
+          "tce_Pd": 0.9090909090909091,
+          "ohem_FA_ppm": 299.6271306818182,
+          "tce_FA_ppm": 273.27104048295456,
+          "pass": true
+        },
+        {
+          "seed": 43,
+          "split": "hctest",
+          "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/eval_hctest/summary_metrics.json",
+          "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed43/hctest/summary_metrics.json",
+          "delta": {
+            "mIoU": 0.006444285225773894,
+            "Precision": 0.012196133742636728,
+            "Pd": 0.0,
+            "FA_ppm": -26.356090198863626
+          },
+          "ohem_mIoU": 0.44585253456221197,
+          "tce_mIoU": 0.45229681978798586,
+          "ohem_Precision": 0.5294117647058824,
+          "tce_Precision": 0.5416078984485191,
+          "ohem_Pd": 0.9090909090909091,
+          "tce_Pd": 0.9090909090909091,
+          "ohem_FA_ppm": 477.1839488636364,
+          "tce_FA_ppm": 450.82785866477275,
+          "pass": true
+        },
+        {
+          "seed": 44,
+          "split": "hctest",
+          "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/eval_hctest/summary_metrics.json",
+          "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed44/hctest/summary_metrics.json",
+          "delta": {
+            "mIoU": 0.016717073925311965,
+            "Precision": 0.018893570441535945,
+            "Pd": 0.0,
+            "FA_ppm": -24.968927556818187
+          },
+          "ohem_mIoU": 0.5770750988142292,
+          "tce_mIoU": 0.5937921727395412,
+          "ohem_Precision": 0.6508172362555721,
+          "tce_Precision": 0.669710806697108,
+          "ohem_Pd": 0.9090909090909091,
+          "tce_Pd": 0.9090909090909091,
+          "ohem_FA_ppm": 325.9832208806818,
+          "tce_FA_ppm": 301.0142933238636,
+          "pass": true
+        }
+      ]
+    },
+    "hcval": {
+      "num_seeds": 3,
+      "expected_num_seeds": 3,
+      "num_pass": 3,
+      "all_pass": true,
+      "delta_summary": {
+        "mIoU": {
+          "mean": 0.017936891022093948,
+          "std": 0.010379888057069677,
+          "values": [
+            0.03195279586963862,
+            0.01470768476528983,
+            0.007150192431353397
+          ]
+        },
+        "Precision": {
+          "mean": 0.02056240552291866,
+          "std": 0.010907306246046114,
+          "values": [
+            0.035215359353290454,
+            0.017409919785406625,
+            0.009061937430058897
+          ]
+        },
+        "Pd": {
+          "mean": 0.0,
+          "std": 0.0,
+          "values": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "FA_ppm": {
+          "mean": -38.14697265624998,
+          "std": 18.4559640308611,
+          "values": [
+            -55.94889322916663,
+            -45.7763671875,
+            -12.715657552083314
+          ]
+        }
+      },
+      "rows": [
+        {
+          "seed": 42,
+          "split": "hcval",
+          "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_42/eval_hcval/summary_metrics.json",
+          "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed42/hcval/summary_metrics.json",
+          "delta": {
+            "mIoU": 0.03195279586963862,
+            "Precision": 0.035215359353290454,
+            "Pd": 0.0,
+            "FA_ppm": -55.94889322916663
+          },
+          "ohem_mIoU": 0.6047904191616766,
+          "tce_mIoU": 0.6367432150313153,
+          "ohem_Precision": 0.6659340659340659,
+          "tce_Precision": 0.7011494252873564,
+          "ohem_Pd": 0.8333333333333334,
+          "tce_Pd": 0.8333333333333334,
+          "ohem_FA_ppm": 386.5559895833333,
+          "tce_FA_ppm": 330.6070963541667,
+          "pass": true
+        },
+        {
+          "seed": 43,
+          "split": "hcval",
+          "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/eval_hcval/summary_metrics.json",
+          "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed43/hcval/summary_metrics.json",
+          "delta": {
+            "mIoU": 0.01470768476528983,
+            "Precision": 0.017409919785406625,
+            "Pd": 0.0,
+            "FA_ppm": -45.7763671875
+          },
+          "ohem_mIoU": 0.4878048780487805,
+          "tce_mIoU": 0.5025125628140703,
+          "ohem_Precision": 0.5300353356890459,
+          "tce_Precision": 0.5474452554744526,
+          "ohem_Pd": 0.8333333333333334,
+          "tce_Pd": 0.8333333333333334,
+          "ohem_FA_ppm": 676.4729817708334,
+          "tce_FA_ppm": 630.6966145833334,
+          "pass": true
+        },
+        {
+          "seed": 44,
+          "split": "hcval",
+          "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/eval_hcval/summary_metrics.json",
+          "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed44/hcval/summary_metrics.json",
+          "delta": {
+            "mIoU": 0.007150192431353397,
+            "Precision": 0.009061937430058897,
+            "Pd": 0.0,
+            "FA_ppm": -12.715657552083314
+          },
+          "ohem_mIoU": 0.6492374727668845,
+          "tce_mIoU": 0.6563876651982379,
+          "ohem_Precision": 0.7303921568627451,
+          "tce_Precision": 0.739454094292804,
+          "ohem_Pd": 0.8333333333333334,
+          "tce_Pd": 0.8333333333333334,
+          "ohem_FA_ppm": 279.7444661458333,
+          "tce_FA_ppm": 267.02880859375,
+          "pass": true
+        }
+      ]
+    }
+  },
+  "rows": [
+    {
+      "seed": 42,
+      "split": "full",
+      "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/eval_full/summary_metrics.json",
+      "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed42/full/summary_metrics.json",
+      "delta": {
+        "mIoU": 0.004822837199031427,
+        "Precision": 0.004392941763456948,
+        "Pd": 0.0010582010582009804,
+        "FA_ppm": -3.0793339373117448
+      },
+      "ohem_mIoU": 0.8343928490754784,
+      "tce_mIoU": 0.8392156862745098,
+      "ohem_Precision": 0.9062773824962321,
+      "tce_Precision": 0.9106703242596891,
+      "ohem_Pd": 0.9798941798941799,
+      "tce_Pd": 0.9809523809523809,
+      "ohem_FA_ppm": 61.4487981221762,
+      "tce_FA_ppm": 58.369464184864455,
+      "pass": true
+    },
+    {
+      "seed": 42,
+      "split": "hcval",
+      "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_42/eval_hcval/summary_metrics.json",
+      "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed42/hcval/summary_metrics.json",
+      "delta": {
+        "mIoU": 0.03195279586963862,
+        "Precision": 0.035215359353290454,
+        "Pd": 0.0,
+        "FA_ppm": -55.94889322916663
+      },
+      "ohem_mIoU": 0.6047904191616766,
+      "tce_mIoU": 0.6367432150313153,
+      "ohem_Precision": 0.6659340659340659,
+      "tce_Precision": 0.7011494252873564,
+      "ohem_Pd": 0.8333333333333334,
+      "tce_Pd": 0.8333333333333334,
+      "ohem_FA_ppm": 386.5559895833333,
+      "tce_FA_ppm": 330.6070963541667,
+      "pass": true
+    },
+    {
+      "seed": 42,
+      "split": "hctest",
+      "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_42/eval_hctest/summary_metrics.json",
+      "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed42/hctest/summary_metrics.json",
+      "delta": {
+        "mIoU": 0.02093001461933497,
+        "Precision": 0.023587365980875075,
+        "Pd": 0.09090909090909083,
+        "FA_ppm": -26.356090198863626
+      },
+      "ohem_mIoU": 0.5310810810810811,
+      "tce_mIoU": 0.5520110957004161,
+      "ohem_Precision": 0.645320197044335,
+      "tce_Precision": 0.66890756302521,
+      "ohem_Pd": 0.8181818181818182,
+      "tce_Pd": 0.9090909090909091,
+      "ohem_FA_ppm": 299.6271306818182,
+      "tce_FA_ppm": 273.27104048295456,
+      "pass": true
+    },
+    {
+      "seed": 43,
+      "split": "full",
+      "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/eval_full/summary_metrics.json",
+      "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed43/full/summary_metrics.json",
+      "delta": {
+        "mIoU": 0.003507722845381922,
+        "Precision": 0.006740747614596421,
+        "Pd": 0.0,
+        "FA_ppm": -5.1475432981927725
+      },
+      "ohem_mIoU": 0.8185726569217541,
+      "tce_mIoU": 0.822080379767136,
+      "ohem_Precision": 0.8928100034734283,
+      "tce_Precision": 0.8995507510880247,
+      "ohem_Pd": 0.9767195767195768,
+      "tce_Pd": 0.9767195767195768,
+      "ohem_FA_ppm": 70.91660097420933,
+      "tce_FA_ppm": 65.76905767601656,
+      "pass": true
+    },
+    {
+      "seed": 43,
+      "split": "hcval",
+      "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/eval_hcval/summary_metrics.json",
+      "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed43/hcval/summary_metrics.json",
+      "delta": {
+        "mIoU": 0.01470768476528983,
+        "Precision": 0.017409919785406625,
+        "Pd": 0.0,
+        "FA_ppm": -45.7763671875
+      },
+      "ohem_mIoU": 0.4878048780487805,
+      "tce_mIoU": 0.5025125628140703,
+      "ohem_Precision": 0.5300353356890459,
+      "tce_Precision": 0.5474452554744526,
+      "ohem_Pd": 0.8333333333333334,
+      "tce_Pd": 0.8333333333333334,
+      "ohem_FA_ppm": 676.4729817708334,
+      "tce_FA_ppm": 630.6966145833334,
+      "pass": true
+    },
+    {
+      "seed": 43,
+      "split": "hctest",
+      "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/eval_hctest/summary_metrics.json",
+      "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed43/hctest/summary_metrics.json",
+      "delta": {
+        "mIoU": 0.006444285225773894,
+        "Precision": 0.012196133742636728,
+        "Pd": 0.0,
+        "FA_ppm": -26.356090198863626
+      },
+      "ohem_mIoU": 0.44585253456221197,
+      "tce_mIoU": 0.45229681978798586,
+      "ohem_Precision": 0.5294117647058824,
+      "tce_Precision": 0.5416078984485191,
+      "ohem_Pd": 0.9090909090909091,
+      "tce_Pd": 0.9090909090909091,
+      "ohem_FA_ppm": 477.1839488636364,
+      "tce_FA_ppm": 450.82785866477275,
+      "pass": true
+    },
+    {
+      "seed": 44,
+      "split": "full",
+      "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/eval_full/summary_metrics.json",
+      "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed44/full/summary_metrics.json",
+      "delta": {
+        "mIoU": 0.00013017501134082732,
+        "Precision": 0.0015428627367666259,
+        "Pd": 0.0010582010582009804,
+        "FA_ppm": -1.1719853044992377
+      },
+      "ohem_mIoU": 0.8429078823031053,
+      "tce_mIoU": 0.8430380573144461,
+      "ohem_Precision": 0.9159407973939523,
+      "tce_Precision": 0.9174836601307189,
+      "ohem_Pd": 0.9767195767195768,
+      "tce_Pd": 0.9777777777777777,
+      "ohem_FA_ppm": 54.554766919239455,
+      "tce_FA_ppm": 53.38278161474022,
+      "pass": true
+    },
+    {
+      "seed": 44,
+      "split": "hcval",
+      "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/eval_hcval/summary_metrics.json",
+      "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed44/hcval/summary_metrics.json",
+      "delta": {
+        "mIoU": 0.007150192431353397,
+        "Precision": 0.009061937430058897,
+        "Pd": 0.0,
+        "FA_ppm": -12.715657552083314
+      },
+      "ohem_mIoU": 0.6492374727668845,
+      "tce_mIoU": 0.6563876651982379,
+      "ohem_Precision": 0.7303921568627451,
+      "tce_Precision": 0.739454094292804,
+      "ohem_Pd": 0.8333333333333334,
+      "tce_Pd": 0.8333333333333334,
+      "ohem_FA_ppm": 279.7444661458333,
+      "tce_FA_ppm": 267.02880859375,
+      "pass": true
+    },
+    {
+      "seed": 44,
+      "split": "hctest",
+      "ohem_summary": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/eval_hctest/summary_metrics.json",
+      "tce_summary": "/home/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed44/hctest/summary_metrics.json",
+      "delta": {
+        "mIoU": 0.016717073925311965,
+        "Precision": 0.018893570441535945,
+        "Pd": 0.0,
+        "FA_ppm": -24.968927556818187
+      },
+      "ohem_mIoU": 0.5770750988142292,
+      "tce_mIoU": 0.5937921727395412,
+      "ohem_Precision": 0.6508172362555721,
+      "tce_Precision": 0.669710806697108,
+      "ohem_Pd": 0.9090909090909091,
+      "tce_Pd": 0.9090909090909091,
+      "ohem_FA_ppm": 325.9832208806818,
+      "tce_FA_ppm": 301.0142933238636,
+      "pass": true
+    }
+  ],
+  "decision": "PROCEED_TO_TCE_THRESHOLD_COMPONENT_REPORT",
+  "next_allowed_gate": "Gate-TCE-F2-threshold-component-report",
+  "forbidden_next_actions": [
+    "seed_search",
+    "checkpoint_search",
+    "threshold_search",
+    "BN_recalibration_tuning",
+    "TCSR_training",
+    "new_loss",
+    "new_model_structure"
+  ]
+}

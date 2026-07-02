@@ -1,0 +1,41 @@
+{
+  "dataset": "NUDT-SIRST",
+  "split": "train",
+  "split_source": "/home/AAAI/OHCM-MSHNet/datasets/NUDT-SIRST/img_idx/train_NUDT-SIRST.txt",
+  "model_name": "MSHNetOHEM",
+  "checkpoint": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "checkpoint_epoch": 400,
+  "output_dir": "docs/internal/ohem_error_components_seed42_train",
+  "num_images": 697,
+  "num_written": 697,
+  "component_count_total": 1013,
+  "num_images_with_components": 697,
+  "target_hit_components": 978,
+  "target_leakage_components": 0,
+  "target_leakage_pixels_total": 0,
+  "target_area_stats": {
+    "target_area_p01": 5.0,
+    "target_area_p05": 5.0,
+    "target_area_p25": 13.0,
+    "target_area_median": 21.0,
+    "target_area_p75": 55.0,
+    "target_area_p95": 80.0,
+    "target_area_p99": 98.0
+  },
+  "params": {
+    "threshold": 0.5,
+    "target_dilate_radius": 5,
+    "near_radius": 12.0,
+    "far_radius": 24.0,
+    "min_component_area": 1,
+    "prob_contrast_min": 0.05,
+    "image_contrast_min": 0.5,
+    "ring_inner_radius": 1,
+    "ring_outer_radius": 5
+  },
+  "outputs": {
+    "error_components": "docs/internal/ohem_error_components_seed42_train/error_components.csv",
+    "image_level_counts": "docs/internal/ohem_error_components_seed42_train/image_level_counts.csv",
+    "per_image": "docs/internal/ohem_error_components_seed42_train/per_image"
+  }
+}

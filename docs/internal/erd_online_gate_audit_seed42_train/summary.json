@@ -1,0 +1,22 @@
+{
+  "gate_pass": true,
+  "source_split": "train",
+  "num_images": 697,
+  "images_without_neg": 0,
+  "images_without_neg_ratio": 0.0,
+  "neg_pixels_mean": 512.0,
+  "neg_pixels_min": 512,
+  "target_leakage_neg_pixels": 0,
+  "far_bg_valid_ratio_mean": 0.9941665890227089,
+  "evidence_prob_on_neg_mean": 0.0007051111656740952,
+  "evidence_prob_on_target_mean": 0.9230801423175969,
+  "evidence_prob_on_easy_bg_mean": 1.161956271643452e-07,
+  "checkpoint": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "model_name": "MSHNetOHEM",
+  "gate_far_radius": 5,
+  "gate_neg_q": 0.01,
+  "gate_neg_min_k": 16,
+  "gate_neg_max_k": 512,
+  "candidate_visuals": "docs/internal/erd_online_gate_audit_seed42_train/candidate_visuals",
+  "decision": "GO_ONLINE_ERD_SEED42"
+}

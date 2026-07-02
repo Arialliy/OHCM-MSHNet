@@ -1,0 +1,34 @@
+{
+  "gate": "Gate-TCE-F3-preflight",
+  "gate_pass": true,
+  "status": "NEW_ONCE_LOCK_CREATED",
+  "next_allowed_action": "RUN_BLIND_EXTERNAL_ONCE",
+  "once_lock": "/home/AAAI/OHCM-MSHNet-main/docs/internal/tce_final/gate_tce_f3_once_lock.json",
+  "final_report": "/home/AAAI/OHCM-MSHNet-main/docs/internal/tce_final/gate_tce_f3_blind_external_report.json",
+  "candidate": "TCE-4-OHEM",
+  "baseline": "MSHNetOHEM-400",
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "tce_epochs": [
+    250,
+    300,
+    350,
+    400
+  ],
+  "splits": [
+    "external_nuaa_sirst",
+    "external_irstd_1k",
+    "external_sirst3"
+  ],
+  "forbidden_after_start": [
+    "threshold_search",
+    "seed_search",
+    "checkpoint_search",
+    "method_change",
+    "rerun_after_result"
+  ]
+}

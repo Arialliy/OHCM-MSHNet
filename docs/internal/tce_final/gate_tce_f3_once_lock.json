@@ -1,0 +1,51 @@
+{
+  "gate": "Gate-TCE-F3-blind-external-once",
+  "status": "STOPPED_BY_F3_PD_REGRESSION",
+  "stopped_utc": "2026-07-02T09:52:44Z",
+  "decision": "F3_FAIL_NO_REDESIGN",
+  "fail_summary": "/home/AAAI/OHCM-MSHNet-main/docs/internal/tce_final/gate_tce_f3_fail_summary.json",
+  "stop_reasons": [
+    "external_nuaa_sirst min_delta_Pd < 0",
+    "external_irstd_1k min_delta_Pd < 0",
+    "external_sirst3 manifest integrity failure"
+  ],
+  "forbidden_after_stop": [
+    "threshold_search",
+    "seed_search",
+    "checkpoint_search",
+    "split_redefinition",
+    "external_rescue",
+    "new_training",
+    "method_change_after_external"
+  ],
+  "created_utc": "2026-07-02T09:32:24.246494+00:00",
+  "candidate": "TCE-4-OHEM",
+  "baseline": "MSHNetOHEM-400",
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "tce_epochs": [
+    250,
+    300,
+    350,
+    400
+  ],
+  "splits": [
+    "external_nuaa_sirst",
+    "external_irstd_1k",
+    "external_sirst3"
+  ],
+  "split_datasets": {
+    "external_nuaa_sirst": "NUAA-SIRST",
+    "external_irstd_1k": "IRSTD-1K",
+    "external_sirst3": "SIRST3"
+  },
+  "frozen_method_plan_sha256": "5250da2e217432575a174543f9df2d69a47225fce6fbd7164d562d4b89fa8e16",
+  "f0_sha256": "8f8b8a84be6b0345922d1f3b11071a5752e7c4b62123b8a2dac78b4a67226a39",
+  "f1_sha256": "6e9aeafe3d6c4c17838fce0ea7c5ff0323214f316bb9315e6ed6c87c86e06ba5",
+  "f2_sha256": "2bba639561e47b3dc9e05dac193d0d295af267989930fc7edb44dfe895d8b42b",
+  "manifest_sha256": "e864d4bb69a0c49519dd5f451f3cd4fc07ba3b8736069b4f21863fd612192dc7"
+}

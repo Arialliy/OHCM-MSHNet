@@ -1,0 +1,62 @@
+{
+  "gate_pass": false,
+  "fail_reasons": [
+    "candidate_to_budget_ratio_mean_too_low",
+    "flat_bg_ratio_mean_too_high"
+  ],
+  "dataset": "NUDT-SIRST",
+  "split": "train",
+  "split_source": "/home/AAAI/OHCM-MSHNet/datasets/NUDT-SIRST/img_idx/train_NUDT-SIRST.txt",
+  "anchor_dir": "docs/internal/ohem_anchor_maps/seed42_train",
+  "candidate_output_dir": "docs/internal/apf_candidates/seed42_train",
+  "num_images": 697,
+  "num_images_with_candidate_empty": 0,
+  "num_images_candidate_under_budget": 0,
+  "candidate_to_budget_ratio_mean": 1.0,
+  "candidate_to_budget_ratio_min": 1.0,
+  "candidate_to_budget_ratio_positive_fraction": 1.0,
+  "target_leakage_pixels_total": 0,
+  "boundary_overlap_pixels_total": 0,
+  "flat_bg_ratio_mean": 0.9993765274972062,
+  "ohem_fp_component_coverage_mean": 0.5,
+  "candidate_component_count_mean": 135.1219512195122,
+  "waterfall_totals": {
+    "num_pixels_total": 45678592,
+    "num_valid_background_pixels": 45647519,
+    "num_far_background_pixels": 45412130,
+    "num_anchor_high_pixels": 284,
+    "num_anchor_disagreement_pixels": 212,
+    "num_nonflat_pixels": 284,
+    "num_ohem_fp_component_pixels": 212,
+    "num_candidate_pixels": 454463,
+    "num_selected_pixels": 454463
+  },
+  "waterfall_ratios": {
+    "far_bg_ratio": 0.9948433342017997,
+    "anchor_high_ratio": 6.253835704249063e-06,
+    "anchor_disagreement_ratio": 4.668356229932399e-06,
+    "nonflat_ratio": 6.253835704249063e-06,
+    "candidate_to_budget_ratio": 1.0,
+    "flat_bg_ratio": 0.9993750866407166,
+    "ohem_fp_component_coverage": 0.5
+  },
+  "candidate_type_breakdown": {
+    "detached_far_fp_pixels": 212,
+    "boundary_excess_pixels": 0,
+    "flat_bg_pixels": 454179,
+    "near_gt_ambiguous_pixels": 0
+  },
+  "strong_gate_pass": false,
+  "params": {
+    "threshold": 0.5,
+    "target_dilation_radius": 5,
+    "tau_low": 0.25,
+    "tau_high": 0.6,
+    "hard_top_q": 0.01
+  },
+  "outputs": {
+    "per_image": "docs/internal/apf_candidate_audit_seed42_train/per_image.csv",
+    "components": "docs/internal/apf_candidate_audit_seed42_train/components.csv",
+    "candidate_dir": "docs/internal/apf_candidates/seed42_train"
+  }
+}

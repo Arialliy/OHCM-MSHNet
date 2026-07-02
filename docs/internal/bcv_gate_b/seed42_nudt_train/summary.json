@@ -1,0 +1,34 @@
+{
+  "gate": "BCV_Gate_B_background_residual_trainability",
+  "dataset": "NUDT-SIRST",
+  "checkpoint": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "epoch": 400,
+  "num_images": 697,
+  "background_reconstruction_error_mean": 0.2766896180669581,
+  "target_residual_bg_ratio_mean": 5.765292900686049,
+  "candidate_to_budget_ratio_mean": 1.7671782994749317e-05,
+  "target_leakage_pixels_total": 0,
+  "flat_candidate_ratio_mean": 0.0007173601147776184,
+  "residual_auroc_target_vs_far_mean": 0.9355147462822251,
+  "thresholds": {
+    "background_reconstruction_error_mean_max": 0.5,
+    "target_residual_bg_ratio_mean_min": 1.5,
+    "candidate_to_budget_ratio_mean_min": 1.0,
+    "target_leakage_pixels_total": 0,
+    "flat_candidate_ratio_mean_max": 0.3,
+    "residual_auroc_target_vs_far_mean_min": 0.65
+  },
+  "checks": {
+    "background_reconstruction_error": true,
+    "target_residual_bg_ratio": true,
+    "candidate_to_budget_ratio": false,
+    "target_leakage": true,
+    "flat_candidate_ratio": true,
+    "residual_auroc": true
+  },
+  "outputs": {
+    "per_image": "docs/internal/bcv_gate_b/seed42_nudt_train/per_image.csv",
+    "summary": "docs/internal/bcv_gate_b/seed42_nudt_train/summary.json"
+  },
+  "gate_pass": false
+}

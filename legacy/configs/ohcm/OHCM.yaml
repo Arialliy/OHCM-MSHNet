@@ -1,0 +1,53 @@
+method: OHCM
+paper_name: "OHCM: Online Hard Clutter Mining for Infrared Small Target Detection"
+status: hold_ohcm_stability_after_three_seed_failure
+internal_source_name: OHCM-light
+
+source:
+  frozen_checkpoint: /home/ly/AAAI/OHCM-MSHNet/checkpoints/OHCM-light_best.pth
+  frozen_internal_config: /home/ly/AAAI/OHCM-MSHNet/configs/OHCM-light.yaml
+  frozen_metrics: /home/ly/AAAI/OHCM-MSHNet/results/OHCM-light_HC_metrics.csv
+  final_decision: /home/ly/AAAI/OHCM-MSHNet/results/STEP4_FINAL_DECISION_STOP_FULL_PROTO.md
+  current_status: /home/ly/AAAI/OHCM-MSHNet/results/CURRENT_OHCM_DECISION_AND_STEP5_PRE_STATUS.md
+  three_seed_report: /home/ly/AAAI/OHCM-MSHNet/results/step5_pre_ohcm_seed_repro/20260615_ohcm_three_seed/OHCM_THREE_SEED_REPORT.md
+  checkpoint_sweep_report: /home/ly/AAAI/OHCM-MSHNet/results/step5_pre_ohcm_stability/20260616_checkpoint_sweep_hc_first/OHCM_CHECKPOINT_SWEEP_REPORT.md
+
+train:
+  model_names: OHCMMSHNet
+  dataset_names: NUDT-SIRST
+  patchSize: 256
+  batchSize: 4
+  nEpochs: 400
+  optimizer_name: Adagrad
+  threads: 1
+  intervals: 10
+  mshnet_warm_epoch: 5
+  mshnet_in_channels: 1
+
+ohcm:
+  online_hard_clutter_mining: true
+  clutterness_head: true
+  clutter_aware_inhibition: true
+  suppression_loss: true
+  margin_loss: true
+  prototype_memory: false
+  lambda_proto: 0.0
+  ohcm_warm_epoch: 60
+  ohcm_tau: 0.5
+  ohcm_dilate_radius: 5
+  ohcm_topk: 3
+  ohcm_gamma_max: 0.3
+  ohcm_gamma_ramp_epochs: 60
+  ohcm_margin_m: 0.1
+  ohcm_margin_delta: 0.5
+  ohcm_mining_mode: cc_area_lc_ms
+  lambda_clu: 0.2
+  lambda_sup: 0.5
+  lambda_margin: 0.1
+
+three_seed_gate:
+  seeds: [0, 1, 2]
+  hc_miou_mean_min: 0.59
+  hc_fa_ppm_mean_max: 240
+  hc_precision_mean_min: 0.72
+  note: "If unstable, tune OHCM only. Do not return to the full/prototype branch."

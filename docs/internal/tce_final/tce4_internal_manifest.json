@@ -1,0 +1,78 @@
+{
+  "method": "TCE-4-OHEM",
+  "base": "MSHNetOHEM",
+  "checkpoints": [
+    250,
+    300,
+    350,
+    400
+  ],
+  "aggregation": "existing_official_tce_aggregation",
+  "threshold": 0.5,
+  "expected_seeds": [
+    42,
+    43,
+    44
+  ],
+  "expected_splits": [
+    "full",
+    "hcval",
+    "hctest"
+  ],
+  "pairs": [
+    {
+      "seed": 42,
+      "split": "full",
+      "ohem_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/eval_full/summary_metrics.json",
+      "tce_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed42/full/summary_metrics.json"
+    },
+    {
+      "seed": 42,
+      "split": "hcval",
+      "ohem_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_42/eval_hcval/summary_metrics.json",
+      "tce_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed42/hcval/summary_metrics.json"
+    },
+    {
+      "seed": 42,
+      "split": "hctest",
+      "ohem_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_42/eval_hctest/summary_metrics.json",
+      "tce_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed42/hctest/summary_metrics.json"
+    },
+    {
+      "seed": 43,
+      "split": "full",
+      "ohem_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/eval_full/summary_metrics.json",
+      "tce_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed43/full/summary_metrics.json"
+    },
+    {
+      "seed": 43,
+      "split": "hcval",
+      "ohem_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/eval_hcval/summary_metrics.json",
+      "tce_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed43/hcval/summary_metrics.json"
+    },
+    {
+      "seed": 43,
+      "split": "hctest",
+      "ohem_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/eval_hctest/summary_metrics.json",
+      "tce_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed43/hctest/summary_metrics.json"
+    },
+    {
+      "seed": 44,
+      "split": "full",
+      "ohem_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/eval_full/summary_metrics.json",
+      "tce_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed44/full/summary_metrics.json"
+    },
+    {
+      "seed": 44,
+      "split": "hcval",
+      "ohem_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/eval_hcval/summary_metrics.json",
+      "tce_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed44/hcval/summary_metrics.json"
+    },
+    {
+      "seed": 44,
+      "split": "hctest",
+      "ohem_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/eval_hctest/summary_metrics.json",
+      "tce_summary": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_seed44/hctest/summary_metrics.json"
+    }
+  ]
+}

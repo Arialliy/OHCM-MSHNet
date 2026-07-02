@@ -1,0 +1,49 @@
+{
+  "gate": "Gate-TCSR-A",
+  "gate_name": "train-only sparse bank audit",
+  "gate_pass": false,
+  "decision": "STOP_TCSR_AT_BANK_AUDIT",
+  "next_allowed_gate": null,
+  "checks": {
+    "train_only": true,
+    "num_images_matches_train": true,
+    "num_images_matches_items": true,
+    "enough_images_with_neg": false,
+    "enough_neg_pixels": false,
+    "has_protect_pixels": true,
+    "no_target_leakage": true,
+    "no_neg_protect_overlap": true
+  },
+  "fail_reasons": [
+    "enough_images_with_neg",
+    "enough_neg_pixels"
+  ],
+  "thresholds": {
+    "min_images_with_neg": 50,
+    "min_neg_pixels_total": 500,
+    "max_target_leakage_pixels": 0,
+    "max_neg_protect_overlap_pixels": 0,
+    "expected_num_images": 697
+  },
+  "summary": {
+    "num_images": 697,
+    "train_images": 697,
+    "item_count": 697,
+    "num_images_with_neg": 1,
+    "neg_pixels_total": 130,
+    "protect_pixels_total": 104900,
+    "target_leakage_pixels_total": 0,
+    "neg_protect_overlap_pixels_total": 0
+  },
+  "forbidden_next_actions": [
+    "seed43",
+    "seed44",
+    "HC-Test",
+    "blind",
+    "external",
+    "threshold_search",
+    "BN_recalibration_tuning",
+    "seed_search",
+    "checkpoint_selection_as_final_method"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "dataset": "NUDT-SIRST",
+  "train_dataset": "NUDT-SIRST",
+  "method": "MSHNetOHEM",
+  "seed": 42,
+  "subset": "full_test",
+  "image_list": null,
+  "num_images": 664,
+  "threshold": 0.5,
+  "metrics_at_threshold": {
+    "threshold": 0.5,
+    "mIoU": 0.8343928490754784,
+    "nIoU": 0.8491602506370457,
+    "Pd": 0.9798941798941799,
+    "FA": 6.14487981221762e-05,
+    "FA_ppm": 61.4487981221762,
+    "Precision": 0.9062773824962321,
+    "Recall": 0.9131908882217906,
+    "F1": 0.9097210005981071,
+    "FP_components": 47.0
+  },
+  "outputs": {
+    "per_image_metrics": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/eval_full/metrics_per_image.csv",
+    "threshold_curve": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/eval_full/threshold_curve.csv"
+  }
+}

@@ -1,0 +1,64 @@
+method: OHCM-light
+status: frozen_current_best
+frozen_at: "2026-06-15"
+
+source:
+  run_root: /home/ly/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate
+  checkpoint: /home/ly/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/OHCM-light/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/OHCMMSHNet_400.pth.tar
+  exports: /home/ly/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/OHCM-light/NUDT-SIRST/seed_42/exports
+
+frozen_outputs:
+  checkpoint: /home/ly/AAAI/OHCM-MSHNet/checkpoints/OHCM-light_best.pth
+  metrics: /home/ly/AAAI/OHCM-MSHNet/results/OHCM-light_HC_metrics.csv
+  predictions: /home/ly/AAAI/OHCM-MSHNet/results/OHCM-light_predictions
+  visualizations: /home/ly/AAAI/OHCM-MSHNet/results/OHCM-light_vis
+
+train:
+  model_names: OHCMMSHNet
+  dataset_names: NUDT-SIRST
+  seed: 42
+  patchSize: 256
+  batchSize: 4
+  nEpochs: 400
+  optimizer_name: Adagrad
+  threads: 1
+  intervals: 10
+  mshnet_warm_epoch: 5
+  mshnet_in_channels: 1
+
+ohcm:
+  ohcm_warm_epoch: 60
+  ohcm_tau: 0.5
+  ohcm_dilate_radius: 5
+  ohcm_topk: 3
+  ohcm_gamma_max: 0.3
+  ohcm_gamma_ramp_epochs: 60
+  ohcm_margin_m: 0.1
+  ohcm_margin_delta: 0.5
+  ohcm_mining_mode: cc_area_lc_ms
+  lambda_clu: 0.2
+  lambda_sup: 0.5
+  lambda_margin: 0.1
+  lambda_proto: 0.0
+
+fixed_metrics:
+  full:
+    mIoU: 0.7942349357867303
+    nIoU: 0.8131030615719643
+    Pd: 0.9671957671957672
+    FA_ppm: 81.16572736257531
+    Precision: 0.8774717269132034
+    F1: 0.885318772860118
+    FP_components: 42.0
+  hcset:
+    mIoU: 0.6086564472497745
+    nIoU: 0.624176987039632
+    Pd: 0.8235294117647058
+    FA_ppm: 211.82789522058823
+    Precision: 0.7409440175631175
+    F1: 0.7567264573991033
+    FP_components: 12.0
+
+comparison_rule:
+  role: "All prototype variants must be compared against this frozen OHCM-light candidate."
+  continue_condition: "Prototype branch must improve HC-Set or cross-domain over OHCM-light while keeping full-test mIoU/Pd from clearly degrading."

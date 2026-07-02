@@ -1,0 +1,15 @@
+{
+  "dataset": "NUDT-SIRST",
+  "split": "train",
+  "split_source": "/home/AAAI/OHCM-MSHNet/datasets/NUDT-SIRST/img_idx/train_NUDT-SIRST.txt",
+  "model_name": "MSHNetOHEM",
+  "checkpoint": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "checkpoint_sha256": "130f7d0196d576e9183b58f810dec462eb06848d13bf1ac8c73f255d873fe0b0",
+  "checkpoint_epoch": 400,
+  "threshold": 0.5,
+  "target_dilation_radius": 5,
+  "num_images": 697,
+  "num_written": 697,
+  "gate_pass": true,
+  "fail_reasons": []
+}

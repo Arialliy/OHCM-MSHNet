@@ -1,0 +1,48 @@
+{
+  "gate": "ECDV_Gate_B_evidence_conditioned_decoy_bank",
+  "dataset": "NUDT-SIRST",
+  "checkpoint": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "num_images": 697,
+  "candidate_attempts": 2091,
+  "decoys_total": 2027,
+  "decoys_per_image_mean": 2.908177905308465,
+  "target_dilate_overlap_pixels": 0,
+  "evidence_response_success_ratio": 0.9693926351028216,
+  "mean_prob_before": 3.4773180242397505e-05,
+  "mean_prob_after": 0.999314621068835,
+  "mean_prob_gain": 0.9992798478885926,
+  "area_in_target_range_ratio": 1.0,
+  "flat_artifact_ratio": 0.8643315244203256,
+  "preview_audit_pass": true,
+  "checks": {
+    "target_dilate_overlap_pixels": true,
+    "decoys_per_image_mean": true,
+    "evidence_response_success_ratio": true,
+    "mean_prob_gain": true,
+    "area_in_target_range_ratio": true,
+    "flat_artifact_ratio": false,
+    "preview_audit_pass": true
+  },
+  "reject_counts": {
+    "response_or_gain": 64
+  },
+  "thresholds": {
+    "min_decoys_per_image": 1.0,
+    "min_evidence_success_ratio": 0.5,
+    "min_mean_prob_gain": 0.2,
+    "min_area_in_target_range_ratio": 0.8,
+    "max_flat_artifact_ratio": 0.3,
+    "min_area": 10.0,
+    "max_area": 160.0,
+    "min_contrast_z": 0.2
+  },
+  "outputs": {
+    "summary": "docs/internal/ecdv_gate_b/seed42_nudt_train/summary.json",
+    "decoy_rows": "docs/internal/ecdv_gate_b/seed42_nudt_train/decoy_rows.csv",
+    "residuals": "docs/internal/ecdv_gate_b/seed42_nudt_train/residuals",
+    "masks": "docs/internal/ecdv_gate_b/seed42_nudt_train/masks",
+    "previews": "docs/internal/ecdv_gate_b/seed42_nudt_train/previews"
+  },
+  "gate_pass": false,
+  "epoch": 400
+}

@@ -1,0 +1,30 @@
+{
+  "gate_pass": true,
+  "method": "ERDMSHNetV3_TPCS",
+  "split": "train",
+  "model_names": [
+    "ERDMSHNetV3"
+  ],
+  "num_images": 697,
+  "candidate_pixels_mean": 654.428981348637,
+  "candidate_pixels_min": 653,
+  "images_without_candidate": 0,
+  "images_without_candidate_ratio": 0.0,
+  "candidate_target_leakage_pixels": 0,
+  "candidate_far_bg_ratio": 1.0,
+  "candidate_high_evidence_mean": 0.0005461559505960942,
+  "candidate_ohem_overlap_fraction": 0.8909176554159609,
+  "candidate_tce_removed_fp_alignment": null,
+  "dataset_names": [
+    "NUDT-SIRST"
+  ],
+  "dataset_dir": "/home/AAAI/OHCM-MSHNet/datasets",
+  "pretrained_ohem": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "erd_far_radius": 7,
+  "erd_neg_topk_ratio": 0.01,
+  "outputs": {
+    "per_image": "docs/internal/erd_v3_candidate_audit_train/per_image.csv",
+    "summary": "docs/internal/erd_v3_candidate_audit_train/summary.json",
+    "gate_pass": "docs/internal/erd_v3_candidate_audit_train/gate_pass.json"
+  }
+}

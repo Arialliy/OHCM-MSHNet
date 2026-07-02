@@ -1,0 +1,51 @@
+{
+  "gate": "Gate-FINAL-STOP-CONSISTENCY",
+  "gate_pass": true,
+  "decision": "READ_ONLY_FAILURE_ARCHIVE_STATE",
+  "root": "/home/ly/AAAI/OHCM-MSHNet-main",
+  "checked_files": {
+    "f3_fail_summary": "/home/ly/AAAI/OHCM-MSHNet-main/docs/internal/tce_final/gate_tce_f3_fail_summary.json",
+    "f3_once_lock": "/home/ly/AAAI/OHCM-MSHNet-main/docs/internal/tce_final/gate_tce_f3_once_lock.json",
+    "readme": "/home/ly/AAAI/OHCM-MSHNet-main/README.md",
+    "stopped_summary": "/home/ly/AAAI/OHCM-MSHNet-main/STOPPED_BRANCHES_SUMMARY.md",
+    "f3_final_report": "/home/ly/AAAI/OHCM-MSHNet-main/docs/internal/tce_final/gate_tce_f3_blind_external_report.json"
+  },
+  "required_status": {
+    "f3_fail_decision": "F3_FAIL_NO_REDESIGN",
+    "f3_once_lock_status": "STOPPED_BY_F3_PD_REGRESSION",
+    "top_readme_state": "STOP_TCE4_AT_F3_EXTERNAL_PD_REGRESSION"
+  },
+  "observed": {
+    "f3_fail_decision": "F3_FAIL_NO_REDESIGN",
+    "f3_once_lock_status": "STOPPED_BY_F3_PD_REGRESSION",
+    "negative_pd_values": [
+      -0.01834862385321101,
+      -0.013468013468013518
+    ],
+    "f3_final_report_exists": false
+  },
+  "errors": [],
+  "warnings": [],
+  "forbidden_next_actions": [
+    "new evaluation",
+    "new training",
+    "threshold search",
+    "seed search",
+    "checkpoint search",
+    "split redefinition",
+    "SIRST3 mask imputation",
+    "TCSR Stage 2",
+    "new verifier",
+    "new suppression head",
+    "loss.py modification",
+    "net.py modification",
+    "train.py modification",
+    "dataset.py modification"
+  ],
+  "allowed_next_actions": [
+    "archive final stopped state",
+    "generate failure-analysis table",
+    "prepare internal report",
+    "freeze repository"
+  ]
+}

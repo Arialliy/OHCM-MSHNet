@@ -1,0 +1,24 @@
+{
+  "gate_pass": false,
+  "fail_reasons": [
+    "final_equals_base_identity_collapse"
+  ],
+  "dataset": "NUDT-SIRST",
+  "split": "train",
+  "split_source": "/home/AAAI/OHCM-MSHNet/datasets/NUDT-SIRST/img_idx/train_NUDT-SIRST.txt",
+  "num_images": 697,
+  "checkpoint": "/home/AAAI/OHCM-MSHNet/results/official/SACFMSHNet/seed42/NUDT-SIRST/SACFMSHNet_1.pth.tar",
+  "epoch": 1,
+  "mean_abs_final_minus_base_prob": 1.0209733382133821e-06,
+  "changed_pixel_ratio_at_0p5": 8.756837338593974e-07,
+  "fusion_gate_mean": 0.11368277822881723,
+  "fusion_gate_min": 0.02959597297012806,
+  "fusion_gate_max": 0.11386626958847046,
+  "fusion_delta_abs_mean": 0.991195551035565,
+  "fusion_weight_entropy_mean": 1.37545518040486,
+  "checkpoint_has_fusion_keys": true,
+  "optimizer_has_fusion_params": true,
+  "outputs": {
+    "per_image": "docs/internal/sacf_activation_seed42_train_epoch1/per_image.csv"
+  }
+}

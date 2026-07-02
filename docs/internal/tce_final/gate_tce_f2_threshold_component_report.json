@@ -1,0 +1,143 @@
+{
+  "gate": "Gate-TCE-F2-threshold-component-report",
+  "method": "TCE-4-OHEM",
+  "gate_pass": true,
+  "decision": "PROCEED_TO_TCE_BLIND_EXTERNAL_ONCE_PERMISSION",
+  "next_allowed_gate": "Gate-TCE-F3-blind-external-once",
+  "fixed_threshold": 0.5,
+  "inference_forward_count": 4,
+  "runtime_note": "TCE-4 uses four MSHNetOHEM checkpoint forwards and must be reported as a robustness/runtime tradeoff.",
+  "source_artifacts": {
+    "fixed_gate_summary_json": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_gate_summary.json",
+    "fixed_gate_summary_csv": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_fixed_gate_summary.csv",
+    "hcval_threshold_matched_csv": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_pareto_vs_e400.csv",
+    "hctest_threshold_matched_csv": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/ensemble_250_400_hctest_pareto_vs_e400.csv",
+    "gate_report_md": "/home/ly/AAAI/OHCM-MSHNet-1/results/far_fp_consensus/20260624_checkpoint_temporal/TCE_OHEM_GATE_REPORT.md"
+  },
+  "fixed_threshold_summary": {
+    "full": {
+      "pass_count": 3,
+      "num_seeds": 3,
+      "mean_delta_mIoU": 0.002820245018584725,
+      "mean_delta_Pd": 0.0007054673721339869,
+      "mean_delta_FA_ppm": -3.1329541800012515,
+      "mean_delta_Precision": 0.0042255173716066645
+    },
+    "hcval": {
+      "pass_count": 3,
+      "num_seeds": 3,
+      "mean_delta_mIoU": 0.017936891022093948,
+      "mean_delta_Pd": 0.0,
+      "mean_delta_FA_ppm": -38.14697265624998,
+      "mean_delta_Precision": 0.02056240552291866
+    },
+    "hctest": {
+      "pass_count": 3,
+      "num_seeds": 3,
+      "mean_delta_mIoU": 0.014697124590140276,
+      "mean_delta_Pd": 0.030303030303030276,
+      "mean_delta_FA_ppm": -25.893702651515145,
+      "mean_delta_Precision": 0.018225690055015915
+    }
+  },
+  "threshold_matched_summary": {
+    "hc_threshold_matched_better_count": 12,
+    "hc_threshold_matched_num_comparisons": 12,
+    "hcval": {
+      "num_pass": 6,
+      "num_comparisons": 6,
+      "constraints": [
+        "same-or-higher Pd than OHEM fixed 0.5",
+        "same-or-higher mIoU than OHEM fixed 0.5"
+      ]
+    },
+    "hctest": {
+      "num_pass": 6,
+      "num_comparisons": 6,
+      "constraints": [
+        "same-or-higher Pd than OHEM fixed 0.5",
+        "same-or-higher mIoU than OHEM fixed 0.5"
+      ]
+    }
+  },
+  "fp_component_summary_at_fixed_threshold": {
+    "full": [
+      {
+        "seed": 42,
+        "ohem_fp_components": 47.0,
+        "tce_fp_components": 32.0,
+        "delta_fp_components": -15.0
+      },
+      {
+        "seed": 43,
+        "ohem_fp_components": 60.0,
+        "tce_fp_components": 56.0,
+        "delta_fp_components": -4.0
+      },
+      {
+        "seed": 44,
+        "ohem_fp_components": 33.0,
+        "tce_fp_components": 36.0,
+        "delta_fp_components": 3.0
+      }
+    ],
+    "hcval": [
+      {
+        "seed": 42,
+        "ohem_fp_components": 9.0,
+        "tce_fp_components": 6.0,
+        "delta_fp_components": -3.0
+      },
+      {
+        "seed": 43,
+        "ohem_fp_components": 10.0,
+        "tce_fp_components": 8.0,
+        "delta_fp_components": -2.0
+      },
+      {
+        "seed": 44,
+        "ohem_fp_components": 8.0,
+        "tce_fp_components": 9.0,
+        "delta_fp_components": 1.0
+      }
+    ],
+    "hctest": [
+      {
+        "seed": 42,
+        "ohem_fp_components": 9.0,
+        "tce_fp_components": 8.0,
+        "delta_fp_components": -1.0
+      },
+      {
+        "seed": 43,
+        "ohem_fp_components": 14.0,
+        "tce_fp_components": 17.0,
+        "delta_fp_components": 3.0
+      },
+      {
+        "seed": 44,
+        "ohem_fp_components": 6.0,
+        "tce_fp_components": 6.0,
+        "delta_fp_components": 0.0
+      }
+    ],
+    "interpretation": "FP component counts are not uniformly reduced, but FA ppm is reduced for all seeds and all fixed-threshold splits; threshold-matched HC comparisons are 12/12 positive."
+  },
+  "checks": {
+    "fixed_threshold_report_positive": true,
+    "threshold_matched_hc_report_positive": true,
+    "pd_not_traded_away": true,
+    "fa_ppm_reduced_consistently": true,
+    "runtime_forward_count_reported": true,
+    "threshold_not_selected_or_tuned": true
+  },
+  "forbidden_next_actions": [
+    "threshold_search",
+    "checkpoint_subset_search",
+    "seed_search",
+    "BN_recalibration_tuning",
+    "TCSR_training",
+    "new_loss",
+    "new_model_structure"
+  ]
+}

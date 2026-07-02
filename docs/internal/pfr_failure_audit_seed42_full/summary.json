@@ -1,0 +1,31 @@
+{
+  "dataset": "NUDT-SIRST",
+  "split": "full",
+  "image_source": "full_test",
+  "num_images": 664,
+  "threshold": 0.5,
+  "ohem_checkpoint": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "candidate_checkpoint": "/home/AAAI/OHCM-MSHNet/results/official/PFRMSHNet/seed42/NUDT-SIRST/PFRMSHNet_400.pth.tar",
+  "ohem_epoch": 400,
+  "candidate_epoch": 400,
+  "mean_per_image_delta_mIoU": -0.04384597464117392,
+  "mean_per_image_delta_precision": -0.036541810600518934,
+  "mean_per_image_delta_FA": 27.966786579913403,
+  "total_target_lost_count": 2,
+  "total_target_shrink_pixels": 1257,
+  "total_target_over_suppressed_pixels": 1962,
+  "total_new_fp_components": 139,
+  "total_removed_fp_components": 79,
+  "total_retained_fp_components": 532,
+  "total_boundary_excess_delta": 652,
+  "total_far_fp_delta": 549,
+  "mean_target_prob_delta": -0.0318840077853094,
+  "mean_far_bg_prob_delta": 1.456981171700327e-05,
+  "failure_mode": "structural_suppression_or_calibration_regression",
+  "structural_failure_flag": true,
+  "outputs": {
+    "per_image": "docs/internal/pfr_failure_audit_seed42_full/per_image.csv",
+    "worst_images": "docs/internal/pfr_failure_audit_seed42_full/worst_images.csv",
+    "component_delta": "docs/internal/pfr_failure_audit_seed42_full/component_delta.csv"
+  }
+}

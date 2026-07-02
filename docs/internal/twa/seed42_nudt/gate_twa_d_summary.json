@@ -1,0 +1,74 @@
+{
+  "gate": "Gate-TWA-D",
+  "method": "TWA without BN recalibration",
+  "split": "HC-Val",
+  "seed": 42,
+  "threshold": 0.5,
+  "criteria": {
+    "min_delta_mIoU": 0.005,
+    "min_fa_reduction_ppm": 10.0,
+    "min_delta_Precision": 0.0,
+    "min_delta_Pd": 0.0
+  },
+  "ohem": {
+    "mIoU": 0.6047904191616766,
+    "FA_ppm": 386.5559895833333,
+    "Precision": 0.6659340659340659,
+    "Pd": 0.8333333333333334
+  },
+  "twa": {
+    "mIoU": 0.6338912133891214,
+    "FA_ppm": 328.06396484375,
+    "Precision": 0.7013888888888888,
+    "Pd": 0.8333333333333334
+  },
+  "delta": {
+    "mIoU": 0.029100794227444715,
+    "FA_ppm": -58.492024739583314,
+    "Precision": 0.03545482295482294,
+    "Pd": 0.0
+  },
+  "checks": {
+    "delta_mIoU": true,
+    "delta_FA_ppm": true,
+    "delta_Precision": true,
+    "delta_Pd": true
+  },
+  "gate_pass": true,
+  "next_allowed_gate": "Gate-TWA-E",
+  "forbidden_if_fail": [
+    "seed43",
+    "seed44",
+    "HC-Test",
+    "blind",
+    "external",
+    "new TWA tuning"
+  ],
+  "candidate": "twa_without_bn",
+  "gate_criteria": {
+    "min_delta_mIoU": 0.005,
+    "max_delta_FA_ppm": -10.0,
+    "min_delta_Precision": 0.0,
+    "min_delta_Pd": 0.0
+  },
+  "decision": "PROCEED_TWA_NO_BN_TO_GATE_E",
+  "forbidden_next_actions": [
+    "seed43",
+    "seed44",
+    "HC-Test",
+    "blind",
+    "external",
+    "BN recalibration tuning",
+    "new model training",
+    "new verifier",
+    "new suppression head"
+  ],
+  "validation": {
+    "pytest_new_tests": "6 passed",
+    "git_diff_check": "PASS",
+    "seed43_44_run": false,
+    "hc_test_run": false,
+    "blind_run": false,
+    "external_run": false
+  }
+}

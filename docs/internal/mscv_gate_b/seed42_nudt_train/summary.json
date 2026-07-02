@@ -1,0 +1,37 @@
+{
+  "gate": "MSCV_Gate_B_candidate_trainability",
+  "dataset": "NUDT-SIRST",
+  "checkpoint": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "epoch": 400,
+  "num_images": 697,
+  "candidate_to_budget_ratio_mean": 0.0015811121464937784,
+  "target_leakage_pixels_total": 0,
+  "target_top20_rate": 0.9971305595408895,
+  "selected_ohem_overlap_mean": 0.0006334325773900257,
+  "nonflat_candidate_ratio_mean": 0.017029206596768376,
+  "pstd_enrichment_vs_ohem": 26737.7440653777,
+  "thresholds": {
+    "candidate_to_budget_ratio_mean": 2.0,
+    "target_top20_rate": 0.15,
+    "selected_ohem_overlap_range": [
+      0.3,
+      0.8
+    ],
+    "nonflat_candidate_ratio_mean": 0.7,
+    "pstd_enrichment_vs_ohem": 1.5
+  },
+  "checks": {
+    "candidate_to_budget_ratio_mean": false,
+    "target_leakage_pixels_total": true,
+    "target_top20_rate": false,
+    "selected_ohem_overlap_min": false,
+    "selected_ohem_overlap_max": true,
+    "nonflat_candidate_ratio_mean": false,
+    "pstd_enrichment_vs_ohem": true
+  },
+  "outputs": {
+    "per_image": "docs/internal/mscv_gate_b/seed42_nudt_train/per_image.csv",
+    "summary": "docs/internal/mscv_gate_b/seed42_nudt_train/summary.json"
+  },
+  "gate_pass": false
+}

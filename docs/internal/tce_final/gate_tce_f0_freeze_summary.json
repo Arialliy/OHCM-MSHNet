@@ -1,0 +1,30 @@
+{
+  "gate": "Gate-TCE-F0-freeze-consistency",
+  "gate_pass": true,
+  "decision": "PROCEED_TO_TCE_INTERNAL_AGGREGATION",
+  "failures": [],
+  "next_allowed_gate": "Gate-TCE-F1-internal-evidence-aggregation",
+  "frozen_method": {
+    "name": "TCE-4-OHEM",
+    "base": "MSHNetOHEM",
+    "checkpoints": [
+      250,
+      300,
+      350,
+      400
+    ],
+    "aggregation": "existing_official_tce_aggregation",
+    "threshold": 0.5,
+    "training": "no_new_training",
+    "inference_forward_count": 4
+  },
+  "forbidden": [
+    "BN_recalibration_tuning",
+    "TCSR_training",
+    "checkpoint_search",
+    "new_loss",
+    "new_model_structure",
+    "seed_search",
+    "threshold_search"
+  ]
+}

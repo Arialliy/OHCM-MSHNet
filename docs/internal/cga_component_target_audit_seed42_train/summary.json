@@ -1,0 +1,29 @@
+{
+  "gate_pass": true,
+  "fail_reasons": [],
+  "dataset": "NUDT-SIRST",
+  "split": "train",
+  "split_source": "/home/AAAI/OHCM-MSHNet/datasets/NUDT-SIRST/img_idx/train_NUDT-SIRST.txt",
+  "num_images": 697,
+  "images_with_targets": 697,
+  "images_with_target_but_no_center": 0,
+  "center_peak_count_total": 968,
+  "center_heatmap_positive_ratio_mean": 0.0012272707530039456,
+  "scale_bin_counts": [
+    54,
+    179,
+    302,
+    433
+  ],
+  "scale_bin_max_ratio": 0.44731404958677684,
+  "boundary_pixels_mean": 105.92109038737446,
+  "local_bg_peak_count_mean": 65.0,
+  "target_leakage_pixels": 0,
+  "thresholds": {
+    "peak_min_k": 8,
+    "scale_bin_max_ratio": 0.85
+  },
+  "outputs": {
+    "per_image": "docs/internal/cga_component_target_audit_seed42_train/per_image.csv"
+  }
+}

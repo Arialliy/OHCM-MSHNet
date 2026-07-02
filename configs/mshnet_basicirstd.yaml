@@ -1,0 +1,18 @@
+model:
+  name: MSHNet
+  source: official MSHNet architecture adapted to BasicIRSTD single-channel input
+  in_channels: 1
+
+loss:
+  name: SLSIoULoss
+  warm_epoch: 5
+
+train:
+  patch_size: 256
+  batch_size: 4
+  epochs: 400
+  optimizer: Adagrad
+  lr: 0.05
+
+test:
+  threshold: 0.5

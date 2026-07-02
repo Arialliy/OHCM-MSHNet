@@ -1,0 +1,38 @@
+{
+  "wrapper": "evaluate_twa_checkpoint",
+  "checkpoint": "/home/AAAI/OHCM-MSHNet-main/docs/internal/twa/seed42_nudt/source_checkpoints/MSHNetOHEM_350.pth.tar",
+  "model_name": "MSHNetOHEM",
+  "dataset": "NUDT-SIRST",
+  "split": "hcval",
+  "direct_command": [
+    "/opt/conda/bin/python",
+    "/home/AAAI/OHCM-MSHNet-main/tools/official/evaluate_checkpoint_direct.py",
+    "--dataset_dir",
+    "./datasets",
+    "--dataset_name",
+    "NUDT-SIRST",
+    "--model_name",
+    "MSHNetOHEM",
+    "--checkpoint",
+    "docs/internal/twa/seed42_nudt/source_checkpoints/MSHNetOHEM_350.pth.tar",
+    "--output_dir",
+    "docs/internal/twa/seed42_nudt/eval_hcval_single_ep350",
+    "--method",
+    "single_ep350",
+    "--threshold",
+    "0.5",
+    "--thresholds",
+    "0.05,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,0.95",
+    "--mshnet_export_head",
+    "final",
+    "--seed",
+    "42",
+    "--image_list",
+    "/home/AAAI/OHCM-MSHNet-main/docs/internal/hc_protocol/hcval_NUDT-SIRST.txt"
+  ],
+  "outputs": {
+    "summary_metrics": "docs/internal/twa/seed42_nudt/eval_hcval_single_ep350/summary_metrics.json",
+    "threshold_curve": "docs/internal/twa/seed42_nudt/eval_hcval_single_ep350/threshold_curve.csv",
+    "component_fp_analysis": "docs/internal/twa/seed42_nudt/eval_hcval_single_ep350/component_fp_analysis.csv"
+  }
+}

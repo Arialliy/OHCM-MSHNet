@@ -1,0 +1,62 @@
+{
+  "gate": "BCV_Gate_C_ohem_fp_residual_audit",
+  "target_component_count": 968,
+  "matched_target_prediction_component_count": 978,
+  "far_fp_component_count": 29,
+  "near_fp_component_count": 6,
+  "target_residual_median": 5.17223166094886,
+  "target_residual_q10": 2.4389845843170432,
+  "far_fp_residual_median": 3.2812425769292393,
+  "far_fp_residual_q90": 4.510735726356506,
+  "target_vs_far_fp_residual_auroc": 0.7617911085779424,
+  "suppressible_far_fp_rate_at_target_recall_99": 0.034482758620689655,
+  "suppressible_far_fp_rate_at_target_recall_995": 0.0,
+  "target_protection_threshold": 1.0995647209414083,
+  "target_protection_threshold_995": 0.9869270966194811,
+  "target_leakage_pixels_total": 0,
+  "checks": {
+    "far_fp_component_count": true,
+    "target_vs_far_fp_residual_auroc": true,
+    "suppressible_far_fp_rate_at_target_recall_99": false,
+    "suppressible_far_fp_rate_at_target_recall_995": false,
+    "target_leakage": true
+  },
+  "diagnostics": {
+    "target_q10_gt_far_fp_median": false
+  },
+  "stop_conditions": {
+    "far_fp_component_count_too_low": false,
+    "auroc_below_hard_stop": false,
+    "suppressible_far_fp_rate_99_below_hard_stop": true,
+    "distribution_overlap_target_q10_le_far_fp_median": true
+  },
+  "thresholds": {
+    "min_far_fp_components": 20,
+    "target_vs_far_fp_residual_auroc_min": 0.65,
+    "hard_stop_min_auroc": 0.6,
+    "suppressible_far_fp_rate_at_target_recall_99_min": 0.2,
+    "suppressible_far_fp_rate_at_target_recall_995_min": 0.1,
+    "hard_stop_min_suppressible_far_fp_rate_99": 0.1,
+    "target_leakage_pixels_total": 0
+  },
+  "gate_pass": false,
+  "overall_decision": "STOP_BCV",
+  "dataset": "NUDT-SIRST",
+  "train_dataset": "NUDT-SIRST",
+  "split": "train",
+  "image_source": "/home/AAAI/OHCM-MSHNet-1/datasets/NUDT-SIRST/img_idx/train_NUDT-SIRST.txt",
+  "num_images": 697,
+  "ohem_checkpoint": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "bcv_checkpoint_or_init": "fixed_context_background",
+  "epoch": 400,
+  "threshold": 0.5,
+  "residual_source": "fixed_context_background_residual_norm",
+  "background_kernel": 31,
+  "target_near_radius": 7,
+  "match_distance": 3.0,
+  "outputs": {
+    "per_image": "docs/internal/bcv_gate_c/seed42_nudt_train/per_image.csv",
+    "per_component": "docs/internal/bcv_gate_c/seed42_nudt_train/per_component.csv",
+    "summary": "docs/internal/bcv_gate_c/seed42_nudt_train/summary.json"
+  }
+}

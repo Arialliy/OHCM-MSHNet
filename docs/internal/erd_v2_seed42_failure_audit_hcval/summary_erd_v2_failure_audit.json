@@ -1,0 +1,23 @@
+{
+  "num_images": 6,
+  "split": "hcval",
+  "image_list": "/home/AAAI/OHCM-MSHNet/results/aaai_p0_paired/20260617_aaai_p0_paired/hc_protocol/hcval_NUDT-SIRST.txt",
+  "mean_delta_miou": 0.057712001651593785,
+  "mean_delta_precision": 0.11744731788755952,
+  "mean_delta_fa_ppm": -35.603841145833336,
+  "mean_target_core_recall_delta": 0.029651154416380405,
+  "mean_target_dilate_recall_delta": -0.002005049072448223,
+  "mean_target_prob_mass_delta": -0.0014425000156421675,
+  "mean_far_bg_prob_mass_delta": -6.945441830197296e-05,
+  "total_removed_fp_pixels": 90,
+  "total_removed_gt_pixels": 61,
+  "mean_suppression_selectivity": 0.4775641025641026,
+  "num_images_target_dilate_drop_gt_2pct": 2,
+  "target_dilate_drop_gt_2pct_ratio": 0.3333333333333333,
+  "mean_gate_target": 0.9322031040986379,
+  "mean_gate_target_dilate": 0.9518222411473592,
+  "mean_gate_far_bg": 0.4738214413324992,
+  "mean_gate_high_evidence_far_bg": 0.6697014033794403,
+  "failure_mode": "target_damage_or_support_shrinkage",
+  "target_damage_flag": true
+}

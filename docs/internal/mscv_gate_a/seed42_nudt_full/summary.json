@@ -1,0 +1,52 @@
+{
+  "gate": "MSCV_Gate_A_beta0_equivalence",
+  "dataset": "NUDT-SIRST",
+  "train_dataset": "NUDT-SIRST",
+  "checkpoint": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "epoch": 400,
+  "threshold": 0.5,
+  "num_images": 664,
+  "max_prob_diff": 0.0,
+  "mask_diff_pixels": 0,
+  "max_suppression": 0.0,
+  "ohem_metrics": {
+    "mIoU": 0.8343928490754784,
+    "Pd": 0.9798941798941799,
+    "detected_targets": 926.0,
+    "target_components": 945.0,
+    "FA_ppm": 61.4487981221762,
+    "Precision": 0.9062773824962321,
+    "Recall": 0.9131908882217906,
+    "F1": 0.9097210005981071,
+    "FP_components": 47.0
+  },
+  "mscv_metrics": {
+    "mIoU": 0.8343928490754784,
+    "Pd": 0.9798941798941799,
+    "detected_targets": 926.0,
+    "target_components": 945.0,
+    "FA_ppm": 61.4487981221762,
+    "Precision": 0.9062773824962321,
+    "Recall": 0.9131908882217906,
+    "F1": 0.9097210005981071,
+    "FP_components": 47.0
+  },
+  "metric_abs_diff": {
+    "mIoU": 0.0,
+    "Pd": 0.0,
+    "FA_ppm": 0.0
+  },
+  "checks": {
+    "prob_max_diff": true,
+    "binary_mask_diff": true,
+    "suppression_zero": true,
+    "full_miou_diff": true,
+    "pd_diff": true,
+    "fa_ppm_diff": true
+  },
+  "gate_pass": true,
+  "outputs": {
+    "per_image": "docs/internal/mscv_gate_a/seed42_nudt_full/per_image.csv",
+    "summary": "docs/internal/mscv_gate_a/seed42_nudt_full/summary.json"
+  }
+}

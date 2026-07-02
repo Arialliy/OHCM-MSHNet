@@ -1,0 +1,33 @@
+{
+  "decision": "FREEZE_TCE4_AS_FINAL_AAAI_CANDIDATE",
+  "previous_stop": {
+    "tcsr": "STOP_TCSR_AT_BANK_AUDIT",
+    "posthoc_selection": "STOP_POSTHOC_SEED_CHECKPOINT_SELECTION_AS_MAIN_METHOD",
+    "late_snapshot_ep300": "DIAGNOSTIC_ONLY",
+    "twa4_no_bn": "DIAGNOSTIC_ONLY"
+  },
+  "method": {
+    "name": "TCE-4-OHEM",
+    "base": "MSHNetOHEM",
+    "checkpoints": [
+      250,
+      300,
+      350,
+      400
+    ],
+    "aggregation": "existing_official_tce_aggregation",
+    "threshold": 0.5,
+    "training": "no_new_training",
+    "inference_forward_count": 4
+  },
+  "forbidden": [
+    "seed_search",
+    "checkpoint_search",
+    "threshold_search",
+    "BN_recalibration_tuning",
+    "TCSR_training",
+    "new_loss",
+    "new_model_structure"
+  ],
+  "next_allowed_gate": "Gate-TCE-F1-internal-evidence-aggregation"
+}

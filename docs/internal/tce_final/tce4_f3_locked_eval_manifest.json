@@ -1,0 +1,107 @@
+{
+  "gate": "Gate-TCE-F3-blind-external-once",
+  "candidate": "TCE-4-OHEM",
+  "baseline": "MSHNetOHEM-400",
+  "status": "LOCKED_BEFORE_BLIND_EXTERNAL",
+  "threshold": 0.5,
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "tce_epochs": [
+    250,
+    300,
+    350,
+    400
+  ],
+  "splits": [
+    "external_nuaa_sirst",
+    "external_irstd_1k",
+    "external_sirst3"
+  ],
+  "split_datasets": {
+    "external_nuaa_sirst": "NUAA-SIRST",
+    "external_irstd_1k": "IRSTD-1K",
+    "external_sirst3": "SIRST3"
+  },
+  "dataset_dir": "/home/AAAI/OHCM-MSHNet-main/datasets",
+  "train_dataset_name": "NUDT-SIRST",
+  "model_name": "MSHNetOHEM",
+  "tce_aggregation": "mean_foreground_probability",
+  "probability_source": "existing direct checkpoint probability path / checkpoint ensemble mean foreground probability",
+  "allowed_next_action": "RUN_F3_ONCE",
+  "forbidden_actions": [
+    "new training",
+    "checkpoint search",
+    "seed search",
+    "threshold search",
+    "BN tuning",
+    "model/loss/train/dataset modification",
+    "rerun after seeing blind/external results"
+  ],
+  "summary_paths": {
+    "external_nuaa_sirst": {
+      "42": {
+        "ohem": "docs/internal/tce_final/f3/external_nuaa_sirst/seed42/ohem/summary_metrics.json",
+        "tce4": "docs/internal/tce_final/f3/external_nuaa_sirst/seed42/tce4/summary_metrics.json"
+      },
+      "43": {
+        "ohem": "docs/internal/tce_final/f3/external_nuaa_sirst/seed43/ohem/summary_metrics.json",
+        "tce4": "docs/internal/tce_final/f3/external_nuaa_sirst/seed43/tce4/summary_metrics.json"
+      },
+      "44": {
+        "ohem": "docs/internal/tce_final/f3/external_nuaa_sirst/seed44/ohem/summary_metrics.json",
+        "tce4": "docs/internal/tce_final/f3/external_nuaa_sirst/seed44/tce4/summary_metrics.json"
+      }
+    },
+    "external_irstd_1k": {
+      "42": {
+        "ohem": "docs/internal/tce_final/f3/external_irstd_1k/seed42/ohem/summary_metrics.json",
+        "tce4": "docs/internal/tce_final/f3/external_irstd_1k/seed42/tce4/summary_metrics.json"
+      },
+      "43": {
+        "ohem": "docs/internal/tce_final/f3/external_irstd_1k/seed43/ohem/summary_metrics.json",
+        "tce4": "docs/internal/tce_final/f3/external_irstd_1k/seed43/tce4/summary_metrics.json"
+      },
+      "44": {
+        "ohem": "docs/internal/tce_final/f3/external_irstd_1k/seed44/ohem/summary_metrics.json",
+        "tce4": "docs/internal/tce_final/f3/external_irstd_1k/seed44/tce4/summary_metrics.json"
+      }
+    },
+    "external_sirst3": {
+      "42": {
+        "ohem": "docs/internal/tce_final/f3/external_sirst3/seed42/ohem/summary_metrics.json",
+        "tce4": "docs/internal/tce_final/f3/external_sirst3/seed42/tce4/summary_metrics.json"
+      },
+      "43": {
+        "ohem": "docs/internal/tce_final/f3/external_sirst3/seed43/ohem/summary_metrics.json",
+        "tce4": "docs/internal/tce_final/f3/external_sirst3/seed43/tce4/summary_metrics.json"
+      },
+      "44": {
+        "ohem": "docs/internal/tce_final/f3/external_sirst3/seed44/ohem/summary_metrics.json",
+        "tce4": "docs/internal/tce_final/f3/external_sirst3/seed44/tce4/summary_metrics.json"
+      }
+    }
+  },
+  "checkpoint_paths": {
+    "42": {
+      "250": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_250.pth.tar",
+      "300": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_300.pth.tar",
+      "350": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_350.pth.tar",
+      "400": "/home/AAAI/OHCM-MSHNet-1/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar"
+    },
+    "43": {
+      "250": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/checkpoints/NUDT-SIRST/MSHNetOHEM_250.pth.tar",
+      "300": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/checkpoints/NUDT-SIRST/MSHNetOHEM_300.pth.tar",
+      "350": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/checkpoints/NUDT-SIRST/MSHNetOHEM_350.pth.tar",
+      "400": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_43/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar"
+    },
+    "44": {
+      "250": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/checkpoints/NUDT-SIRST/MSHNetOHEM_250.pth.tar",
+      "300": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/checkpoints/NUDT-SIRST/MSHNetOHEM_300.pth.tar",
+      "350": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/checkpoints/NUDT-SIRST/MSHNetOHEM_350.pth.tar",
+      "400": "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar"
+    }
+  }
+}

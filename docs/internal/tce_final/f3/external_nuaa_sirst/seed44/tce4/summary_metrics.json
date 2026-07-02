@@ -1,0 +1,34 @@
+{
+  "dataset": "NUAA-SIRST",
+  "train_dataset": "NUDT-SIRST",
+  "method": "TCE4_OHEM_F3_external_nuaa_sirst_seed44",
+  "model": "MSHNetOHEM",
+  "seed": 44,
+  "image_list": null,
+  "num_images": 86,
+  "checkpoints": [
+    "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/checkpoints/NUDT-SIRST/MSHNetOHEM_250.pth.tar",
+    "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/checkpoints/NUDT-SIRST/MSHNetOHEM_300.pth.tar",
+    "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/checkpoints/NUDT-SIRST/MSHNetOHEM_350.pth.tar",
+    "/home/AAAI/OHCM-MSHNet-1/results/aaai_p0_paired/20260617_aaai_p0_paired/MSHNetOHEM/NUDT-SIRST/seed_44/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar"
+  ],
+  "aggregation": "mean",
+  "threshold": 0.5,
+  "metrics_at_threshold": {
+    "threshold": 0.5,
+    "mIoU": 0.5106882168925965,
+    "nIoU": 0.6025542546866239,
+    "Pd": 0.8256880733944955,
+    "FA": 6.416607819319246e-05,
+    "FA_ppm": 64.16607819319246,
+    "Precision": 0.8389721627408994,
+    "Recall": 0.5661849710982659,
+    "F1": 0.6761000862812769,
+    "FP_components": 19.0,
+    "mean_prob_target": 0.556608643826923,
+    "mean_prob_bg": 7.25817455860934e-05
+  },
+  "outputs": {
+    "threshold_curve": "/home/AAAI/OHCM-MSHNet-main/docs/internal/tce_final/f3/external_nuaa_sirst/seed44/tce4/threshold_curve.csv"
+  }
+}

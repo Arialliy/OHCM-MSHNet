@@ -1,0 +1,191 @@
+{
+  "gate": "Gate-TWA-E2-FSC",
+  "gate_name": "Full-Safe Single-Late Control",
+  "seed": 42,
+  "split_scope": [
+    "Full",
+    "HC-Val"
+  ],
+  "threshold": 0.5,
+  "context": {
+    "gate_e_pass": false,
+    "gate_e_decision": "STOP_TWA_NO_BN_AT_GATE_E",
+    "ep250_gate_a_pass": false,
+    "ep250_gate_a_decision": "STOP_LATE_SNAPSHOT_EP250_AT_GATE_A",
+    "context_valid": true
+  },
+  "allowed_epochs": [
+    250,
+    300,
+    350,
+    400
+  ],
+  "candidate_epochs": [
+    250,
+    300,
+    350
+  ],
+  "baseline_epoch": 400,
+  "snapshot_records": [
+    {
+      "epoch": 250,
+      "full": {
+        "mIoU": 0.831138652207591,
+        "Precision": 0.906090566834383,
+        "Pd": 0.9798941798941799,
+        "FA_ppm": 61.33389760212726
+      },
+      "hcval": {
+        "mIoU": 0.7106481481481481,
+        "Precision": 0.7871794871794872,
+        "Pd": 0.8333333333333334,
+        "FA_ppm": 211.07991536458334
+      },
+      "full_delta_vs_ohem": {
+        "mIoU": -0.0032541968678874156,
+        "Precision": -0.00018681566184908238,
+        "Pd": 0.0,
+        "FA_ppm": -0.11490052004894125
+      },
+      "hcval_delta_vs_ohem": {
+        "mIoU": 0.1058577289864715,
+        "Precision": 0.12124542124542126,
+        "Pd": 0.0,
+        "FA_ppm": -175.47607421874997
+      },
+      "full_safe": false,
+      "hcval_positive": true,
+      "eligible_single": false,
+      "ineligible_reasons": [
+        "full_miou_regression",
+        "full_precision_regression"
+      ]
+    },
+    {
+      "epoch": 300,
+      "full": {
+        "mIoU": 0.8392447217821462,
+        "Precision": 0.9085086276294144,
+        "Pd": 0.9809523809523809,
+        "FA_ppm": 60.069991881588855
+      },
+      "hcval": {
+        "mIoU": 0.6340956340956341,
+        "Precision": 0.6979405034324943,
+        "Pd": 0.8333333333333334,
+        "FA_ppm": 335.693359375
+      },
+      "full_delta_vs_ohem": {
+        "mIoU": 0.004851872706667759,
+        "Precision": 0.0022312451331822913,
+        "Pd": 0.0010582010582009804,
+        "FA_ppm": -1.3788062405873447
+      },
+      "hcval_delta_vs_ohem": {
+        "mIoU": 0.029305214933957435,
+        "Precision": 0.03200643749842835,
+        "Pd": 0.0,
+        "FA_ppm": -50.862630208333314
+      },
+      "full_safe": true,
+      "hcval_positive": true,
+      "eligible_single": true,
+      "ineligible_reasons": []
+    },
+    {
+      "epoch": 350,
+      "full": {
+        "mIoU": 0.8394421018488485,
+        "Precision": 0.9114280683218876,
+        "Pd": 0.9809523809523809,
+        "FA_ppm": 57.79496158461973
+      },
+      "hcval": {
+        "mIoU": 0.6175869120654397,
+        "Precision": 0.6832579185520362,
+        "Pd": 0.8333333333333334,
+        "FA_ppm": 356.0384114583333
+      },
+      "full_delta_vs_ohem": {
+        "mIoU": 0.005049252773370094,
+        "Precision": 0.005150685825655477,
+        "Pd": 0.0010582010582009804,
+        "FA_ppm": -3.6538365375564723
+      },
+      "hcval_delta_vs_ohem": {
+        "mIoU": 0.012796492903763057,
+        "Precision": 0.017323852617970315,
+        "Pd": 0.0,
+        "FA_ppm": -30.517578125
+      },
+      "full_safe": true,
+      "hcval_positive": true,
+      "eligible_single": true,
+      "ineligible_reasons": []
+    }
+  ],
+  "best_eligible_single_epoch": 300,
+  "twa4": {
+    "full": {
+      "mIoU": 0.8388914071100175,
+      "Precision": 0.9097292932130192,
+      "Pd": 0.9809523809523809,
+      "FA_ppm": 59.08184740916792
+    },
+    "hcval": {
+      "mIoU": 0.6338912133891214,
+      "Precision": 0.7013888888888888,
+      "Pd": 0.8333333333333334,
+      "FA_ppm": 328.06396484375
+    },
+    "full_delta_vs_ohem": {
+      "mIoU": 0.004498558034539135,
+      "Precision": 0.0034519107167870766,
+      "Pd": 0.0010582010582009804,
+      "FA_ppm": -2.366950713008279
+    },
+    "hcval_delta_vs_ohem": {
+      "mIoU": 0.029100794227444715,
+      "Precision": 0.03545482295482294,
+      "Pd": 0.0,
+      "FA_ppm": -58.492024739583314
+    },
+    "full_safe": true,
+    "hcval_positive": true,
+    "eligible": true,
+    "ineligible_reasons": []
+  },
+  "best_eligible_single": {
+    "epoch": 300,
+    "hcval_delta_miou": 0.029305214933957435,
+    "hcval_delta_fa_ppm": -50.862630208333314,
+    "full_delta_miou": 0.004851872706667759
+  },
+  "best_eligible_by_hcval": "LateSnapshot-ep300",
+  "twa4_hcval_delta_miou": 0.029100794227444715,
+  "best_hcval_delta_miou": 0.029305214933957435,
+  "best_advantage_over_twa4": 0.00020442070651272015,
+  "min_hc_miou_switch_margin": 0.005,
+  "twa4_not_worse_than_best_fullsafe_single_hcval": false,
+  "gate_pass": true,
+  "decision": "STOP_POSTHOC_SEED_CHECKPOINT_SELECTION_AS_MAIN_METHOD",
+  "selected_candidate": null,
+  "next_allowed_gate": "STOP_POSTHOC_CHECKPOINT_SELECTION",
+  "selection_status": "TIE_OR_NUMERICAL_NOISE_NO_SWITCH",
+  "promotion_allowed": false,
+  "reason": "Best Full-safe single-late checkpoint advantage over TWA-4 is below the practical HC-Val mIoU switch margin.",
+  "forbidden_next_actions": [
+    "seed43_or_seed44_before_this_gate_passes",
+    "HC-Test",
+    "blind",
+    "external",
+    "threshold_search",
+    "BN_tuning",
+    "new_training",
+    "new_model_structure",
+    "new_loss",
+    "new_verifier_or_suppression_head",
+    "new_checkpoint_epochs_outside_250_300_350_400",
+    "new_TWA_combinations"
+  ]
+}

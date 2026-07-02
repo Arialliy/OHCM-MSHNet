@@ -1,0 +1,27 @@
+model:
+  name: HCNet
+  backbone: MSHNet
+  in_channels: 1
+  num_classes: 1
+  base_channels: 32
+
+loss:
+  name: HCNetLoss
+  bce_weight: 1.0
+  iou_weight: 1.0
+  hard_weight: 0.2
+  contrast_weight: 0.1
+
+train:
+  dataset_name: NUAA-SIRST
+  patch_size: 256
+  batch_size: 16
+  epochs: 800
+  optimizer: Adam
+  lr: 0.0005
+  scheduler: MultiStepLR
+  milestones: [200, 300]
+  gamma: 0.1
+
+test:
+  threshold: 0.5

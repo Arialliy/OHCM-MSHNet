@@ -1,0 +1,21 @@
+{
+  "gate_pass": true,
+  "num_images": 697,
+  "dataset": "NUDT-SIRST",
+  "split": "train",
+  "seed": 42,
+  "checkpoint": "/home/AAAI/OHCM-MSHNet/results/step3_ohcm_light_gate/20260613_step3_gate/MSHNetOHEM/NUDT-SIRST/seed_42/checkpoints/NUDT-SIRST/MSHNetOHEM_400.pth.tar",
+  "checkpoint_epoch": 400,
+  "candidate_to_budget_ratio_mean": 0.4935395382495825,
+  "candidate_empty_image_ratio": 0.0,
+  "target_leakage_pixels": 0,
+  "far_hard_candidate_count_mean": 322.987087517934,
+  "target_protect_pixel_count_mean": 44.58106169296987,
+  "boundary_protect_pixel_count_mean": 172.75753228120516,
+  "ohem_overlap_fraction_mean": 0.9472618667125074,
+  "far_hard_prob_mean": 0.0010756372113648746,
+  "fail_reasons": [],
+  "outputs": {
+    "per_image": "docs/internal/pfr_candidate_audit_seed42_train/per_image.csv"
+  }
+}
